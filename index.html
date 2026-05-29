@@ -294,7 +294,8 @@ nav.scrolled .nav-cta:hover { background: var(--green-dark) !important; }
   z-index: 10;
   opacity: 0; animation: fadeUp 0.8s ease 1.2s forwards;
 }
-.badge-icon { font-size: 24px; margin-bottom: 8px; }
+.badge-icon { width: 36px; height: 36px; margin-bottom: 8px; color: var(--green); }
+.badge-icon svg { width: 100%; height: 100%; }
 .badge-text { font-size: 13px; font-weight: 600; color: var(--black); }
 .badge-sub { font-size: 10px; color: var(--gray); margin-top: 2px; letter-spacing: 0.05em; }
 
@@ -387,7 +388,8 @@ nav.scrolled .nav-cta:hover { background: var(--green-dark) !important; }
 }
 .service-card:hover .service-number { color: var(--green-light); }
 
-.service-icon { font-size: 28px; margin-bottom: 16px; }
+.service-icon { width: 40px; height: 40px; margin-bottom: 16px; color: var(--green); }
+.service-icon svg { width: 100%; height: 100%; }
 .service-name {
   font-size: 16px; font-weight: 600;
   letter-spacing: 0.02em; color: var(--black);
@@ -421,7 +423,8 @@ nav.scrolled .nav-cta:hover { background: var(--green-dark) !important; }
 }
 
 .diff-item { text-align: center; flex: 1; }
-.diff-icon { font-size: 28px; margin-bottom: 12px; }
+.diff-icon { width: 36px; height: 36px; margin-bottom: 12px; color: var(--green); }
+.diff-icon svg { width: 100%; height: 100%; }
 .diff-num {
   font-family: 'Cormorant Garamond', serif;
   font-size: 48px; font-weight: 600;
@@ -577,7 +580,8 @@ nav.scrolled .nav-cta:hover { background: var(--green-dark) !important; }
 }
 .addon-item:hover { background: var(--cream-dark); transform: translateY(-2px); }
 .addon-left { display: flex; align-items: center; gap: 10px; }
-.addon-icon { font-size: 18px; }
+.addon-icon { width: 22px; height: 22px; color: var(--green); flex-shrink: 0; }
+.addon-icon svg { width: 100%; height: 100%; }
 .addon-name { font-size: 12px; font-weight: 600; color: var(--black); }
 .addon-detail { font-size: 10px; color: var(--gray); margin-top: 2px; }
 .addon-price {
@@ -813,7 +817,7 @@ nav.scrolled .nav-cta:hover { background: var(--green-dark) !important; }
   background: var(--green);
   border-radius: 10px;
   display: flex; align-items: center; justify-content: center;
-  font-size: 20px; flex-shrink: 0;
+  flex-shrink: 0; color: white;
 }
 .method-label { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); }
 .method-value { font-size: 15px; font-weight: 600; color: var(--black); margin-top: 2px; }
@@ -1115,7 +1119,7 @@ footer {
       </div>
     </div>
     <div class="hero-badge" style="position:relative; left:0; bottom:0; margin-top:40px; display:inline-block;">
-      <div class="badge-icon">🚁</div>
+      <div class="badge-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.5"/><path d="M12 9.5V7M12 17v-2.5M9.5 12H7M17 12h-2.5"/><path d="M5.5 5.5l2 2M16.5 16.5l2 2M5.5 18.5l2-2M16.5 7.5l2-2"/><circle cx="4.5" cy="4.5" r="1.5" fill="currentColor" stroke="none"/><circle cx="19.5" cy="4.5" r="1.5" fill="currentColor" stroke="none"/><circle cx="4.5" cy="19.5" r="1.5" fill="currentColor" stroke="none"/><circle cx="19.5" cy="19.5" r="1.5" fill="currentColor" stroke="none"/></svg></div>
       <div class="badge-text">Drone Included</div>
       <div class="badge-sub">On every package</div>
     </div>
@@ -1168,37 +1172,37 @@ footer {
   <div class="services-grid">
     <div class="service-card reveal reveal-delay-1">
       <div class="service-number">01</div>
-      <div class="service-icon">📸</div>
+      <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg></div>
       <div class="service-name">HDR Photography</div>
       <p class="service-desc">Professionally edited high-dynamic-range photos that capture perfect light in every room. Sky replacement and color correction included.</p>
     </div>
     <div class="service-card reveal reveal-delay-2">
       <div class="service-number">02</div>
-      <div class="service-icon">🚁</div>
+      <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.5"/><path d="M12 9.5V7M12 17v-2.5M9.5 12H7M17 12h-2.5"/><path d="M5.5 5.5l2 2M16.5 16.5l2 2M5.5 18.5l2-2M16.5 7.5l2-2"/><circle cx="4.5" cy="4.5" r="1.5" fill="currentColor" stroke="none"/><circle cx="19.5" cy="4.5" r="1.5" fill="currentColor" stroke="none"/><circle cx="4.5" cy="19.5" r="1.5" fill="currentColor" stroke="none"/><circle cx="19.5" cy="19.5" r="1.5" fill="currentColor" stroke="none"/></svg></div>
       <div class="service-name">Drone Aerials</div>
       <p class="service-desc">Stunning aerial photography and video from our FAA-compliant drone. Included in every package — not an extra.</p>
     </div>
     <div class="service-card reveal reveal-delay-3">
       <div class="service-number">03</div>
-      <div class="service-icon">🎬</div>
+      <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 10l4.553-2.277A1 1 0 0121 8.723v6.554a1 1 0 01-1.447.894L15 14M2 8a2 2 0 012-2h9a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V8z"/></svg></div>
       <div class="service-name">Cinematic Video</div>
       <p class="service-desc">Property walkthrough videos and drone footage edited into compelling reels — perfect for MLS, social media, and your listings page.</p>
     </div>
     <div class="service-card reveal reveal-delay-1">
       <div class="service-number">04</div>
-      <div class="service-icon">🔄</div>
+      <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l9 5v10l-9 5-9-5V7l9-5z"/><path d="M12 22V12M3 7l9 5 9-5"/></svg></div>
       <div class="service-name">3D Virtual Tours</div>
       <p class="service-desc">Immersive Matterport-powered 3D tours captured with our 360° camera. Let buyers explore every room before stepping inside.</p>
     </div>
     <div class="service-card reveal reveal-delay-2">
       <div class="service-number">05</div>
-      <div class="service-icon">🛋️</div>
+      <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 9V6a2 2 0 00-2-2H6a2 2 0 00-2 2v3"/><path d="M2 11a2 2 0 014 0v3h12v-3a2 2 0 014 0v7H2v-7z"/><path d="M6 18v2M18 18v2"/></svg></div>
       <div class="service-name">Virtual Staging</div>
       <p class="service-desc">Transform empty rooms into beautifully furnished spaces. Show buyers the full potential of any property — digitally.</p>
     </div>
     <div class="service-card reveal reveal-delay-3">
       <div class="service-number">06</div>
-      <div class="service-icon">📐</div>
+      <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M3 9h10M3 15h10M9 9v12M13 3v6"/></svg></div>
       <div class="service-name">Floor Plans</div>
       <p class="service-desc">Accurate 2D and near-3D floor plans that help buyers understand layout and flow. Available as add-on to any package.</p>
     </div>
@@ -1208,25 +1212,25 @@ footer {
 <!-- DIFF BAND -->
 <div class="diff-band reveal">
   <div class="diff-item">
-    <div class="diff-icon">🚁</div>
+    <div class="diff-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.5"/><path d="M12 9.5V7M12 17v-2.5M9.5 12H7M17 12h-2.5"/><path d="M5.5 5.5l2 2M16.5 16.5l2 2M5.5 18.5l2-2M16.5 7.5l2-2"/><circle cx="4.5" cy="4.5" r="1.5" fill="currentColor" stroke="none"/><circle cx="19.5" cy="4.5" r="1.5" fill="currentColor" stroke="none"/><circle cx="4.5" cy="19.5" r="1.5" fill="currentColor" stroke="none"/><circle cx="19.5" cy="19.5" r="1.5" fill="currentColor" stroke="none"/></svg></div>
     <div class="diff-num">100%</div>
     <div class="diff-label">Drone Included</div>
   </div>
   <div class="diff-divider"></div>
   <div class="diff-item">
-    <div class="diff-icon">⚡</div>
+    <div class="diff-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
     <div class="diff-num">24h</div>
     <div class="diff-label">Delivery</div>
   </div>
   <div class="diff-divider"></div>
   <div class="diff-item">
-    <div class="diff-icon">📍</div>
+    <div class="diff-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
     <div class="diff-num">FL</div>
     <div class="diff-label">Statewide Coverage</div>
   </div>
   <div class="diff-divider"></div>
   <div class="diff-item">
-    <div class="diff-icon">✅</div>
+    <div class="diff-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
     <div class="diff-num">MLS</div>
     <div class="diff-label">Ready to Upload</div>
   </div>
@@ -1327,7 +1331,7 @@ footer {
   <div class="addons-grid">
     <div class="addon-item reveal reveal-delay-1">
       <div class="addon-left">
-        <div class="addon-icon">📐</div>
+        <div class="addon-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M3 9h10M3 15h10M9 9v12M13 3v6"/></svg></div>
         <div>
           <div class="addon-name">Floor Plan Basic</div>
           <div class="addon-detail">2D layout</div>
@@ -1337,7 +1341,7 @@ footer {
     </div>
     <div class="addon-item reveal reveal-delay-2">
       <div class="addon-left">
-        <div class="addon-icon">📋</div>
+        <div class="addon-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
         <div>
           <div class="addon-name">Floor Plan Enhanced</div>
           <div class="addon-detail">Detailed 2D</div>
@@ -1347,7 +1351,7 @@ footer {
     </div>
     <div class="addon-item reveal reveal-delay-3">
       <div class="addon-left">
-        <div class="addon-icon">🏗️</div>
+        <div class="addon-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></div>
         <div>
           <div class="addon-name">Floor Plan Premium</div>
           <div class="addon-detail">Near-3D (+$20 over 3k sqft)</div>
@@ -1357,7 +1361,7 @@ footer {
     </div>
     <div class="addon-item reveal reveal-delay-4">
       <div class="addon-left">
-        <div class="addon-icon">🛋️</div>
+        <div class="addon-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 9V6a2 2 0 00-2-2H6a2 2 0 00-2 2v3"/><path d="M2 11a2 2 0 014 0v3h12v-3a2 2 0 014 0v7H2v-7z"/><path d="M6 18v2M18 18v2"/></svg></div>
         <div>
           <div class="addon-name">Virtual Staging</div>
           <div class="addon-detail">Per photo</div>
@@ -1367,7 +1371,7 @@ footer {
     </div>
     <div class="addon-item reveal reveal-delay-1">
       <div class="addon-left">
-        <div class="addon-icon">📸</div>
+        <div class="addon-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg></div>
         <div>
           <div class="addon-name">Extra Photos</div>
           <div class="addon-detail">Per additional photo</div>
@@ -1377,7 +1381,7 @@ footer {
     </div>
     <div class="addon-item reveal reveal-delay-2">
       <div class="addon-left">
-        <div class="addon-icon">🌇</div>
+        <div class="addon-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 18a5 5 0 00-10 0M12 2v4M4.22 10.22l2.83 2.83M1 18h2M21 18h2M19.78 10.22l-2.83 2.83M23 22H1"/></svg></div>
         <div>
           <div class="addon-name">Twilight Exterior</div>
           <div class="addon-detail">Golden hour shot</div>
@@ -1387,7 +1391,7 @@ footer {
     </div>
     <div class="addon-item reveal reveal-delay-3">
       <div class="addon-left">
-        <div class="addon-icon">🗑️</div>
+        <div class="addon-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.12" y2="15.88"/><line x1="14.47" y1="14.48" x2="20" y2="20"/><line x1="8.12" y1="8.12" x2="12" y2="12"/></svg></div>
         <div>
           <div class="addon-name">Object Removal</div>
           <div class="addon-detail">Per object</div>
@@ -1397,7 +1401,7 @@ footer {
     </div>
     <div class="addon-item reveal reveal-delay-4">
       <div class="addon-left">
-        <div class="addon-icon">💬</div>
+        <div class="addon-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
         <div>
           <div class="addon-name">Need something custom?</div>
           <div class="addon-detail">Let's talk</div>
@@ -1536,21 +1540,21 @@ footer {
     <p>Reach out via WhatsApp for the fastest response, or fill out the form and we'll get back to you within a few hours.</p>
     <div class="contact-methods">
       <a href="https://wa.me/17862085633" class="contact-method" target="_blank">
-        <div class="method-icon">📱</div>
+        <div class="method-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.01 1.18 2 2 0 012 .01h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg></div>
         <div>
           <div class="method-label">WhatsApp (Fastest)</div>
           <div class="method-value">(786) 208-5633</div>
         </div>
       </a>
       <a href="tel:17862085633" class="contact-method">
-        <div class="method-icon">📞</div>
+        <div class="method-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.01 1.18 2 2 0 012 .01h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg></div>
         <div>
           <div class="method-label">Call Us</div>
           <div class="method-value">(786) 208-5633</div>
         </div>
       </a>
       <a href="mailto:Novoaluis19@gmail.com" class="contact-method">
-        <div class="method-icon">✉️</div>
+        <div class="method-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
         <div>
           <div class="method-label">Email</div>
           <div class="method-value">Novoaluis19@gmail.com</div>
