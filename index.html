@@ -259,7 +259,7 @@ nav.scrolled .nav-cta:hover { background: var(--green-dark) !important; }
 .photo-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr;
   height: 100%;
   gap: 3px;
 }
@@ -282,9 +282,6 @@ nav.scrolled .nav-cta:hover { background: var(--green-dark) !important; }
 }
 .photo-cell:hover img { transform: scale(1.04); }
 
-.photo-cell.large {
-  grid-row: 1 / 3;
-}
 
 /* Floating badge */
 .hero-badge {
@@ -1125,11 +1122,8 @@ footer {
   </div>
   <div class="hero-right">
     <div class="photo-grid">
-      <div class="photo-cell large">
-        <img src="https://lh3.googleusercontent.com/d/1Ui9wuZ90e9ujXGf5-qvDOzHotDBcoPso" alt="Real estate photography - exterior">
-      </div>
       <div class="photo-cell">
-        <img src="https://lh3.googleusercontent.com/d/1kWgtj5QuHde5R4FdoiPtnsumnxrPCVog" alt="Real estate photography - interior">
+        <img src="https://lh3.googleusercontent.com/d/1Ui9wuZ90e9ujXGf5-qvDOzHotDBcoPso" alt="Real estate photography - exterior">
       </div>
       <div class="photo-cell">
         <img src="https://lh3.googleusercontent.com/d/11qyNLwm2058ri0EdpeTtO6lUIqKC7S4_" alt="Drone aerial photography">
@@ -1776,10 +1770,9 @@ reveals.forEach(el => observer.observe(el));
   }
 
   const cells = document.querySelectorAll('.photo-cell img');
-  if (cells.length >= 3) {
+  if (cells.length >= 2) {
     rotateCell(cells[0], 4000,  500);
-    rotateCell(cells[1], 5000, 2000);
-    rotateCell(cells[2], 4500, 3500);
+    rotateCell(cells[1], 5000, 2500);
   }
 })();
 
