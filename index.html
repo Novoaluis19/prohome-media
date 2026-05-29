@@ -1,0 +1,1729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pro Home Media — Real Estate Photography & Video | South Florida</title>
+<meta name="description" content="South Florida's premier real estate photography, drone aerials, cinematic video, and 3D virtual tours. 24-hour delivery. Starting at $175.">
+<meta name="keywords" content="real estate photography Miami, drone aerials Florida, real estate video, Matterport 3D tour, virtual staging, South Florida real estate media">
+<meta name="author" content="Pro Home Media">
+<meta property="og:title" content="Pro Home Media — Real Estate Photography & Video">
+<meta property="og:description" content="Professional photography, drone aerials, cinematic video, and 3D virtual tours for South Florida real estate agents. 24-hour delivery. Starting at $175.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://prohomemedia.com">
+<meta property="og:image" content="https://lh3.googleusercontent.com/d/1mr2WyglRHkvHkQP4CD38jduW9vyJCAD6">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="Pro Home Media">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Pro Home Media — Real Estate Photography & Video">
+<meta name="twitter:description" content="Professional photography, drone aerials, cinematic video, and 3D virtual tours for South Florida real estate.">
+<meta name="twitter:image" content="https://lh3.googleusercontent.com/d/1mr2WyglRHkvHkQP4CD38jduW9vyJCAD6">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-24VMWXKXZ0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-24VMWXKXZ0');
+</script>
+<link rel="canonical" href="https://prohomemedia.com">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpolygon points='32,4 58,18 58,46 32,60 6,46 6,18' fill='%234A5916' stroke='%238BA07A' stroke-width='2'/%3E%3Ccircle cx='32' cy='32' r='11' fill='none' stroke='white' stroke-width='2'/%3E%3Ccircle cx='32' cy='32' r='7' fill='none' stroke='%238BA07A' stroke-width='1.5'/%3E%3Ccircle cx='28' cy='28' r='3' fill='white' opacity='0.5'/%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500;600&family=Montserrat:wght@500;700;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --green: #4A5916;
+  --green-dark: #2e3a0d;
+  --green-light: #8BA07A;
+  --cream: #F5F0E8;
+  --cream-dark: #EAE4D8;
+  --black: #1A1A1A;
+  --white: #FFFFFF;
+  --gray: #6B6B6B;
+  --gray-light: #D4D0C8;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream);
+  color: var(--black);
+  overflow-x: hidden;
+  cursor: none;
+}
+
+/* Custom cursor */
+.cursor {
+  width: 12px; height: 12px;
+  background: var(--green);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+  transform: translate(-50%, -50%);
+}
+.cursor-ring {
+  width: 36px; height: 36px;
+  border: 1.5px solid var(--green);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9998;
+  transition: transform 0.35s ease, width 0.3s, height 0.3s, opacity 0.3s;
+  transform: translate(-50%, -50%);
+}
+.cursor-ring.hover { width: 56px; height: 56px; opacity: 0.5; }
+
+/* NAV */
+nav {
+  position: fixed; top: 0; left: 0; right: 0;
+  z-index: 100;
+  padding: 16px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background 0.4s, padding 0.4s, box-shadow 0.4s;
+}
+nav.scrolled {
+  background: rgba(245,240,232,0.97);
+  backdrop-filter: blur(12px);
+  padding: 12px 60px;
+  box-shadow: 0 1px 24px rgba(74,89,22,0.10);
+}
+.nav-logo {
+  display: flex; align-items: center;
+  text-decoration: none;
+}
+/* Logo SVG white version by default (on green hero) */
+.nav-logo .logo-light { display: none; }
+.nav-logo .logo-white { display: block; }
+nav.scrolled .nav-logo .logo-light { display: block; }
+nav.scrolled .nav-logo .logo-white { display: none; }
+
+.nav-links { display: flex; align-items: center; gap: 36px; }
+.nav-links a {
+  font-size: 13px; font-weight: 500; letter-spacing: 0.06em;
+  text-transform: uppercase; color: white;
+  text-decoration: none; transition: color 0.2s;
+  position: relative;
+}
+nav.scrolled .nav-links a { color: var(--black); }
+.nav-links a::after {
+  content: ''; position: absolute; bottom: -4px; left: 0; right: 0;
+  height: 1.5px; background: var(--green-light);
+  transform: scaleX(0); transform-origin: left;
+  transition: transform 0.3s ease;
+}
+nav.scrolled .nav-links a::after { background: var(--green); }
+.nav-links a:hover { color: var(--green-light); }
+nav.scrolled .nav-links a:hover { color: var(--green); }
+.nav-links a:hover::after { transform: scaleX(1); }
+
+.nav-cta {
+  background: rgba(255,255,255,0.15) !important;
+  color: white !important;
+  border: 1.5px solid rgba(255,255,255,0.5) !important;
+  padding: 10px 22px; border-radius: 6px;
+  font-size: 12px !important; letter-spacing: 0.1em !important;
+  transition: all 0.2s !important;
+}
+.nav-cta::after { display: none !important; }
+.nav-cta:hover { background: white !important; color: var(--green) !important; border-color: white !important; }
+nav.scrolled .nav-cta { background: var(--green) !important; color: white !important; border-color: var(--green) !important; }
+nav.scrolled .nav-cta:hover { background: var(--green-dark) !important; }
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-left {
+  background: var(--green);
+  display: flex; flex-direction: column;
+  justify-content: center;
+  padding: 140px 80px 80px 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-left::before {
+  content: '';
+  position: absolute; top: -100px; left: -100px;
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(139,160,122,0.15) 0%, transparent 70%);
+  animation: pulse 6s ease-in-out infinite;
+}
+
+.hero-left::after {
+  content: '';
+  position: absolute; bottom: 0; right: 0;
+  width: 200px; height: 200px;
+  background: var(--green-dark);
+  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.15); opacity: 1; }
+}
+
+.hero-eyebrow {
+  font-size: 10px; font-weight: 600; letter-spacing: 0.25em;
+  text-transform: uppercase; color: var(--green-light);
+  margin-bottom: 24px;
+  opacity: 0; animation: fadeUp 0.8s ease 0.2s forwards;
+}
+
+.hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(48px, 5vw, 72px);
+  font-weight: 300;
+  line-height: 1.05;
+  color: var(--white);
+  margin-bottom: 28px;
+  opacity: 0; animation: fadeUp 0.8s ease 0.4s forwards;
+}
+.hero-title em { font-style: italic; color: var(--green-light); }
+
+.hero-desc {
+  font-size: 15px; line-height: 1.75;
+  color: rgba(255,255,255,0.72);
+  max-width: 380px;
+  margin-bottom: 48px;
+  opacity: 0; animation: fadeUp 0.8s ease 0.6s forwards;
+}
+
+.hero-btns {
+  display: flex; gap: 16px; align-items: center;
+  opacity: 0; animation: fadeUp 0.8s ease 0.8s forwards;
+}
+
+.btn-primary {
+  background: var(--cream);
+  color: var(--green);
+  padding: 14px 32px;
+  border-radius: 6px;
+  font-size: 12px; font-weight: 600;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.25s;
+  border: 2px solid var(--cream);
+}
+.btn-primary:hover { background: transparent; color: var(--cream); transform: translateY(-2px); }
+
+.btn-ghost {
+  color: rgba(255,255,255,0.8);
+  font-size: 12px; font-weight: 500;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  text-decoration: none;
+  display: flex; align-items: center; gap: 8px;
+  transition: color 0.2s;
+}
+.btn-ghost:hover { color: var(--white); }
+.btn-ghost span { font-size: 18px; }
+
+.hero-stats {
+  display: flex; gap: 40px;
+  margin-top: 64px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(255,255,255,0.12);
+  opacity: 0; animation: fadeUp 0.8s ease 1s forwards;
+}
+.stat-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 36px; font-weight: 600;
+  color: var(--white); line-height: 1;
+}
+.stat-label {
+  font-size: 10px; letter-spacing: 0.15em;
+  text-transform: uppercase; color: var(--green-light);
+  margin-top: 6px;
+}
+
+/* Hero right - photo grid */
+.hero-right {
+  position: relative;
+  background: var(--cream-dark);
+  overflow: hidden;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  height: 100%;
+  gap: 3px;
+}
+
+.photo-cell {
+  overflow: hidden;
+  position: relative;
+}
+.photo-cell::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(74,89,22,0.1) 0%, transparent 60%);
+}
+
+.photo-cell img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+  filter: saturate(0.9);
+}
+.photo-cell:hover img { transform: scale(1.04); }
+
+.photo-cell.large {
+  grid-row: 1 / 3;
+}
+
+/* Floating badge */
+.hero-badge {
+  position: absolute;
+  bottom: 48px; left: -30px;
+  background: var(--white);
+  border-radius: 16px;
+  padding: 20px 24px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+  z-index: 10;
+  opacity: 0; animation: fadeUp 0.8s ease 1.2s forwards;
+}
+.badge-icon { font-size: 24px; margin-bottom: 8px; }
+.badge-text { font-size: 13px; font-weight: 600; color: var(--black); }
+.badge-sub { font-size: 10px; color: var(--gray); margin-top: 2px; letter-spacing: 0.05em; }
+
+/* Photo placeholders */
+.photo-placeholder {
+  width: 100%; height: 100%;
+  display: flex; align-items: center; justify-content: center;
+  flex-direction: column; gap: 8px;
+}
+.ph-a { background: #c8d4b0; }
+.ph-b { background: #a8b898; }
+.ph-c { background: #b8c8a0; }
+.ph-d { background: #d0dac0; }
+
+.ph-icon { font-size: 32px; opacity: 0.5; }
+.ph-text { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.4; font-weight: 600; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* SCROLL REVEAL */
+.reveal {
+  opacity: 0; transform: translateY(40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+/* SERVICES */
+.services {
+  padding: 120px 80px;
+  background: var(--white);
+}
+
+.section-header {
+  display: flex; align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 72px;
+}
+.section-eyebrow {
+  font-size: 10px; font-weight: 600;
+  letter-spacing: 0.25em; text-transform: uppercase;
+  color: var(--green); margin-bottom: 16px;
+}
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(36px, 4vw, 56px);
+  font-weight: 300; line-height: 1.1;
+  color: var(--black);
+}
+.section-title strong { font-weight: 600; }
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+}
+
+.service-card {
+  background: var(--cream);
+  padding: 48px 40px;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.3s;
+  cursor: default;
+}
+.service-card::before {
+  content: '';
+  position: absolute; bottom: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--green);
+  transform: scaleX(0); transform-origin: left;
+  transition: transform 0.4s ease;
+}
+.service-card:hover { background: var(--cream-dark); }
+.service-card:hover::before { transform: scaleX(1); }
+
+.service-number {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 64px; font-weight: 300;
+  color: var(--gray-light);
+  line-height: 1;
+  margin-bottom: 24px;
+  transition: color 0.3s;
+}
+.service-card:hover .service-number { color: var(--green-light); }
+
+.service-icon { font-size: 28px; margin-bottom: 16px; }
+.service-name {
+  font-size: 16px; font-weight: 600;
+  letter-spacing: 0.02em; color: var(--black);
+  margin-bottom: 12px;
+}
+.service-desc {
+  font-size: 13px; line-height: 1.7;
+  color: var(--gray);
+}
+
+/* DIFFERENTIATOR BAND */
+.diff-band {
+  background: var(--green);
+  padding: 60px 80px;
+  display: flex; align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  overflow: hidden;
+  position: relative;
+}
+.diff-band::before {
+  content: 'PRO HOME MEDIA';
+  position: absolute;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 200px; font-weight: 700;
+  color: rgba(255,255,255,0.04);
+  white-space: nowrap;
+  top: 50%; transform: translateY(-50%);
+  letter-spacing: -0.02em;
+  pointer-events: none;
+}
+
+.diff-item { text-align: center; flex: 1; }
+.diff-icon { font-size: 28px; margin-bottom: 12px; }
+.diff-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 48px; font-weight: 600;
+  color: var(--white); line-height: 1;
+}
+.diff-label {
+  font-size: 11px; letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--green-light); margin-top: 8px;
+}
+.diff-divider {
+  width: 1px; height: 80px;
+  background: rgba(255,255,255,0.15);
+  flex-shrink: 0;
+}
+
+/* PACKAGES */
+.packages {
+  padding: 120px 80px;
+  background: var(--cream);
+}
+
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 72px;
+}
+
+.pkg-card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 40px 32px;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid transparent;
+  transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+.pkg-card:hover {
+  border-color: var(--green-light);
+  transform: translateY(-6px);
+  box-shadow: 0 24px 60px rgba(74,89,22,0.12);
+}
+.pkg-card.featured {
+  background: var(--green);
+  border-color: var(--green);
+  transform: translateY(-8px);
+  box-shadow: 0 24px 60px rgba(74,89,22,0.25);
+}
+.pkg-card.featured:hover { transform: translateY(-14px); }
+
+.pkg-badge {
+  position: absolute; top: 20px; right: 20px;
+  background: var(--green-light);
+  color: var(--white);
+  font-size: 9px; font-weight: 700;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  padding: 4px 10px; border-radius: 20px;
+}
+.pkg-card.featured .pkg-badge { background: var(--cream); color: var(--green); }
+
+.pkg-name {
+  font-size: 11px; font-weight: 600;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--green); margin-bottom: 8px;
+}
+.pkg-card.featured .pkg-name { color: var(--green-light); }
+
+.pkg-price {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 52px; font-weight: 600;
+  color: var(--black); line-height: 1;
+  margin-bottom: 4px;
+}
+.pkg-card.featured .pkg-price { color: var(--white); }
+
+.pkg-price span { font-size: 24px; font-weight: 300; vertical-align: super; }
+
+.pkg-sub {
+  font-size: 11px; color: var(--gray);
+  margin-bottom: 32px;
+}
+.pkg-card.featured .pkg-sub { color: rgba(255,255,255,0.6); }
+
+.pkg-divider {
+  height: 1px;
+  background: var(--cream-dark);
+  margin-bottom: 28px;
+}
+.pkg-card.featured .pkg-divider { background: rgba(255,255,255,0.15); }
+
+.pkg-features { list-style: none; margin-bottom: 36px; }
+.pkg-features li {
+  font-size: 13px; color: var(--black);
+  padding: 7px 0;
+  display: flex; align-items: flex-start; gap: 10px;
+  line-height: 1.4;
+}
+.pkg-card.featured .pkg-features li { color: rgba(255,255,255,0.85); }
+.pkg-features li::before {
+  content: '✓';
+  color: var(--green);
+  font-weight: 700; font-size: 12px;
+  flex-shrink: 0; margin-top: 1px;
+}
+.pkg-card.featured .pkg-features li::before { color: var(--green-light); }
+
+.pkg-btn {
+  display: block; width: 100%;
+  padding: 13px;
+  background: var(--cream);
+  color: var(--green);
+  border: 2px solid var(--cream-dark);
+  border-radius: 8px;
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  text-decoration: none; text-align: center;
+  transition: all 0.25s;
+  cursor: pointer;
+}
+.pkg-btn:hover { background: var(--green); color: var(--white); border-color: var(--green); }
+.pkg-card.featured .pkg-btn {
+  background: var(--white); color: var(--green);
+  border-color: var(--white);
+}
+.pkg-card.featured .pkg-btn:hover { background: var(--cream); }
+
+/* ADD ONS */
+.addons {
+  padding: 80px;
+  background: var(--white);
+}
+.addons-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px; font-weight: 300;
+  color: var(--black); margin-bottom: 40px;
+  text-align: center;
+}
+.addons-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  max-width: 900px; margin: 0 auto;
+}
+.addon-item {
+  background: var(--cream);
+  border-radius: 12px;
+  padding: 20px;
+  display: flex; align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  transition: background 0.2s, transform 0.2s;
+}
+.addon-item:hover { background: var(--cream-dark); transform: translateY(-2px); }
+.addon-left { display: flex; align-items: center; gap: 10px; }
+.addon-icon { font-size: 18px; }
+.addon-name { font-size: 12px; font-weight: 600; color: var(--black); }
+.addon-detail { font-size: 10px; color: var(--gray); margin-top: 2px; }
+.addon-price {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px; font-weight: 600;
+  color: var(--green); white-space: nowrap;
+}
+
+/* PROCESS */
+.process {
+  padding: 120px 80px;
+  background: var(--cream);
+  position: relative;
+  overflow: hidden;
+}
+.process::before {
+  content: '';
+  position: absolute; top: 0; right: 0;
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(139,160,122,0.15) 0%, transparent 70%);
+}
+
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  margin-top: 72px;
+  position: relative;
+}
+.process-steps::before {
+  content: '';
+  position: absolute;
+  top: 36px; left: 10%;  right: 10%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--green-light), transparent);
+}
+
+.process-step {
+  text-align: center;
+  padding: 0 24px;
+  position: relative;
+}
+.step-num {
+  width: 72px; height: 72px;
+  background: var(--white);
+  border: 2px solid var(--green-light);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 28px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px; font-weight: 600;
+  color: var(--green);
+  position: relative; z-index: 1;
+  transition: background 0.3s, color 0.3s;
+}
+.process-step:hover .step-num { background: var(--green); color: var(--white); border-color: var(--green); }
+.step-title {
+  font-size: 14px; font-weight: 600;
+  color: var(--black); margin-bottom: 10px;
+  letter-spacing: 0.02em;
+}
+.step-desc { font-size: 13px; line-height: 1.65; color: var(--gray); }
+
+/* FEATURED WORK */
+.featured {
+  padding: 120px 80px;
+  background: var(--cream-dark);
+  position: relative;
+  overflow: hidden;
+}
+.featured::before {
+  content: '';
+  position: absolute; bottom: -120px; left: -120px;
+  width: 480px; height: 480px;
+  background: radial-gradient(circle, rgba(139,160,122,0.18) 0%, transparent 70%);
+  pointer-events: none;
+}
+.featured-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 16px;
+  margin-top: 64px;
+  margin-bottom: 56px;
+}
+.featured-card {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--black);
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+  transition: transform .35s ease, box-shadow .35s ease;
+}
+.featured-card:hover { transform: translateY(-4px); box-shadow: 0 24px 60px rgba(0,0,0,.22); }
+.featured-card.tall { grid-row: 1 / 3; }
+
+.featured-card img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .6s ease, filter .4s ease;
+  filter: saturate(.88) brightness(.88);
+}
+.featured-card.tall img { height: 560px; }
+.featured-card:not(.tall) img { height: 268px; }
+.featured-card:hover img { transform: scale(1.05); filter: saturate(.95) brightness(.78); }
+
+.featured-card-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(10,14,5,.75) 0%, rgba(0,0,0,.1) 55%, transparent 100%);
+  transition: opacity .3s;
+}
+.featured-card-body {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  padding: 20px 24px 24px;
+}
+.featured-card-type {
+  display: inline-block;
+  background: rgba(139,160,122,.25);
+  border: 1px solid rgba(139,160,122,.4);
+  color: var(--green-light);
+  font-size: 9px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
+  padding: 4px 10px; border-radius: 20px;
+  margin-bottom: 10px;
+}
+.featured-card-addr {
+  font-size: 15px; font-weight: 600; color: var(--white);
+  margin-bottom: 2px;
+}
+.featured-card-sub { font-size: 11px; color: rgba(255,255,255,.55); letter-spacing: .04em; }
+
+.featured-services {
+  display: flex; gap: 6px; margin-top: 10px;
+}
+.fs-tag {
+  padding: 3px 8px; border-radius: 10px;
+  font-size: 8px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+}
+.fs-hdr { background: rgba(74,89,22,.4); color: #b8cc8a; }
+.fs-drone { background: rgba(42,74,138,.4); color: #90aae0; }
+
+.featured-cta {
+  text-align: center;
+}
+.btn-portfolio {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: var(--green);
+  color: var(--white);
+  padding: 16px 40px;
+  border-radius: 8px;
+  font-size: 12px; font-weight: 700;
+  letter-spacing: .1em; text-transform: uppercase;
+  text-decoration: none;
+  transition: background .25s, transform .25s;
+}
+.btn-portfolio:hover { background: var(--green-dark); transform: translateY(-2px); }
+.btn-portfolio .arrow { font-size: 18px; transition: transform .2s; }
+.btn-portfolio:hover .arrow { transform: translateX(4px); }
+
+/* AREA COVERAGE */
+.coverage {
+  background: var(--black);
+  padding: 80px;
+  display: flex; align-items: center;
+  justify-content: space-between; gap: 60px;
+}
+.coverage-text .eyebrow {
+  font-size: 10px; font-weight: 600;
+  letter-spacing: 0.25em; text-transform: uppercase;
+  color: var(--green-light); margin-bottom: 16px;
+}
+.coverage-text h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 42px; font-weight: 300;
+  color: var(--white); line-height: 1.15;
+  margin-bottom: 24px;
+}
+.coverage-text p {
+  font-size: 14px; line-height: 1.75;
+  color: rgba(255,255,255,0.6);
+  max-width: 400px;
+}
+.coverage-areas {
+  display: flex; flex-wrap: wrap;
+  gap: 10px; flex: 1; max-width: 500px;
+}
+.area-tag {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.75);
+  padding: 8px 18px; border-radius: 24px;
+  font-size: 12px; font-weight: 500;
+  letter-spacing: 0.04em;
+  transition: all 0.2s;
+}
+.area-tag:hover { background: var(--green); border-color: var(--green); color: var(--white); }
+
+/* CONTACT */
+.contact {
+  padding: 120px 80px;
+  background: var(--cream);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+.contact-left .section-eyebrow { margin-bottom: 16px; }
+.contact-left h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(36px, 4vw, 52px);
+  font-weight: 300; line-height: 1.1;
+  color: var(--black); margin-bottom: 24px;
+}
+.contact-left p {
+  font-size: 15px; line-height: 1.75;
+  color: var(--gray); margin-bottom: 40px;
+}
+.contact-methods { display: flex; flex-direction: column; gap: 16px; }
+.contact-method {
+  display: flex; align-items: center; gap: 16px;
+  padding: 18px 24px;
+  background: var(--white);
+  border-radius: 12px;
+  text-decoration: none;
+  transition: all 0.25s;
+  border: 1.5px solid transparent;
+}
+.contact-method:hover { border-color: var(--green); transform: translateX(4px); }
+.method-icon {
+  width: 44px; height: 44px;
+  background: var(--green);
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px; flex-shrink: 0;
+}
+.method-label { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); }
+.method-value { font-size: 15px; font-weight: 600; color: var(--black); margin-top: 2px; }
+
+/* Contact form */
+.contact-form {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 48px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.06);
+}
+.form-title {
+  font-size: 20px; font-weight: 600;
+  color: var(--black); margin-bottom: 32px;
+}
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+.form-group { margin-bottom: 16px; }
+.form-group label {
+  display: block; font-size: 10px;
+  font-weight: 600; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--gray);
+  margin-bottom: 8px;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  background: var(--cream);
+  border: 1.5px solid var(--cream-dark);
+  border-radius: 8px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px; color: var(--black);
+  outline: none;
+  transition: border-color 0.2s;
+  appearance: none;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus { border-color: var(--green); }
+.form-group textarea { resize: vertical; min-height: 100px; }
+
+.form-submit {
+  width: 100%;
+  padding: 14px;
+  background: var(--green);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px; font-weight: 700;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.25s;
+  margin-top: 8px;
+}
+.form-submit:hover { background: var(--green-dark); transform: translateY(-2px); }
+.form-submit:disabled { opacity: 0.65; cursor: not-allowed; transform: none; }
+[data-fs-success] { display: none; background: rgba(74,89,22,.1); color: var(--green); font-size: 14px; padding: 14px 16px; border-radius: 8px; margin-bottom: 12px; }
+[data-fs-error]:not([data-fs-error=""]) { display: block; color: #b91c1c; font-size: 12px; margin-top: 4px; }
+[data-fs-error][data-fs-error=""] { display: none; }
+.form-field-error { display: none; color: #b91c1c; font-size: 12px; margin-top: 4px; }
+[aria-invalid="true"] { border-color: #b91c1c !important; }
+
+/* FOOTER */
+footer {
+  background: var(--black);
+  padding: 60px 80px 40px;
+}
+.footer-top {
+  display: flex; justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  margin-bottom: 32px;
+}
+.footer-brand .logo-name {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700; font-size: 20px;
+  color: var(--white); letter-spacing: 0.04em;
+}
+.footer-brand .logo-sub {
+  font-size: 10px; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--green-light);
+  margin-top: 4px;
+}
+.footer-brand p {
+  font-size: 13px; line-height: 1.7;
+  color: rgba(255,255,255,0.45);
+  max-width: 280px; margin-top: 16px;
+}
+.footer-links h4 {
+  font-size: 10px; font-weight: 700;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--green-light); margin-bottom: 20px;
+}
+.footer-links a {
+  display: block; font-size: 13px;
+  color: rgba(255,255,255,0.5);
+  text-decoration: none; margin-bottom: 10px;
+  transition: color 0.2s;
+}
+.footer-links a:hover { color: var(--white); }
+.footer-bottom {
+  display: flex; justify-content: space-between;
+  align-items: center;
+}
+.footer-copy { font-size: 12px; color: rgba(255,255,255,0.3); }
+.footer-umbrella {
+  font-size: 11px; color: rgba(255,255,255,0.3);
+  letter-spacing: 0.05em;
+}
+.footer-umbrella span { color: var(--green-light); }
+
+/* MOBILE */
+@media (max-width: 768px) {
+  nav { padding: 20px 24px; }
+  nav.scrolled { padding: 14px 24px; }
+  .nav-links { display: none; }
+  .hero { grid-template-columns: 1fr; }
+  .hero-left { padding: 120px 32px 60px; }
+  .hero-right { height: 50vh; }
+  .hero-badge { left: 20px; bottom: 20px; }
+  .services { padding: 80px 32px; }
+  .services-grid { grid-template-columns: 1fr; gap: 2px; }
+  .diff-band { padding: 48px 32px; flex-wrap: wrap; gap: 24px; }
+  .diff-divider { display: none; }
+  .packages { padding: 80px 32px; }
+  .packages-grid { grid-template-columns: 1fr 1fr; }
+  .featured { padding: 80px 24px; }
+  .featured-grid { grid-template-columns: 1fr; }
+  .featured-card.tall { grid-row: auto; }
+  .featured-card.tall img { height: 300px; }
+  .featured-card:not(.tall) img { height: 220px; }
+  .addons { padding: 60px 32px; }
+  .addons-grid { grid-template-columns: 1fr 1fr; }
+  .process { padding: 80px 32px; }
+  .process-steps { grid-template-columns: 1fr 1fr; }
+  .process-steps::before { display: none; }
+  .coverage { padding: 60px 32px; flex-direction: column; }
+  .contact { padding: 80px 32px; grid-template-columns: 1fr; }
+  footer { padding: 48px 32px 32px; }
+  .footer-top { flex-direction: column; gap: 40px; }
+  .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+  .section-header { flex-direction: column; align-items: flex-start; gap: 16px; }
+}
+
+/* Animated underline on scroll */
+.marquee-wrap {
+  overflow: hidden;
+  background: var(--cream-dark);
+  padding: 18px 0;
+  border-top: 1px solid var(--gray-light);
+  border-bottom: 1px solid var(--gray-light);
+}
+.marquee-track {
+  display: flex;
+  gap: 0;
+  animation: marquee 20s linear infinite;
+  width: max-content;
+}
+.marquee-track:hover { animation-play-state: paused; }
+.marquee-item {
+  font-size: 11px; font-weight: 600;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--green);
+  padding: 0 32px;
+  white-space: nowrap;
+  display: flex; align-items: center; gap: 32px;
+}
+.marquee-item::after { content: '✦'; color: var(--green-light); }
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* WhatsApp floating button */
+.whatsapp-fab {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 500;
+  width: 58px;
+  height: 58px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(37,211,102,.45);
+  text-decoration: none;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.whatsapp-fab:hover {
+  transform: scale(1.1) translateY(-2px);
+  box-shadow: 0 8px 32px rgba(37,211,102,.55);
+}
+.whatsapp-fab svg { width: 30px; height: 30px; }
+</style>
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#" class="nav-logo">
+    <!-- White version: shown on green hero background -->
+    <svg class="logo-white" width="160" height="58" viewBox="0 0 400 180" xmlns="http://www.w3.org/2000/svg">
+      <g transform="translate(72, 90)">
+        <polygon points="0,-54 46,-27 46,27 0,54 -46,27 -46,-27" stroke="white" stroke-width="2.5" fill="none"/>
+        <line x1="0" y1="-54" x2="0" y2="-24" stroke="white" stroke-width="2" stroke-linecap="round"/>
+        <line x1="0" y1="54" x2="0" y2="24" stroke="white" stroke-width="2" stroke-linecap="round"/>
+        <line x1="46" y1="-27" x2="21" y2="-12" stroke="white" stroke-width="2" stroke-linecap="round"/>
+        <line x1="-46" y1="-27" x2="-21" y2="-12" stroke="white" stroke-width="2" stroke-linecap="round"/>
+        <line x1="46" y1="27" x2="21" y2="12" stroke="white" stroke-width="2" stroke-linecap="round"/>
+        <line x1="-46" y1="27" x2="-21" y2="12" stroke="white" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="0" cy="0" r="20" fill="white" opacity="0.15"/>
+        <circle cx="0" cy="0" r="20" stroke="white" stroke-width="1.5" fill="none"/>
+        <circle cx="0" cy="0" r="13" stroke="#8BA07A" stroke-width="1.5" fill="none"/>
+        <circle cx="-4" cy="-4" r="4" fill="white" opacity="0.35"/>
+        <circle cx="0" cy="-54" r="4" fill="#8BA07A"/>
+        <circle cx="46" cy="-27" r="4" fill="#8BA07A"/>
+        <circle cx="46" cy="27" r="4" fill="#8BA07A"/>
+        <circle cx="0" cy="54" r="4" fill="#8BA07A"/>
+        <circle cx="-46" cy="27" r="4" fill="#8BA07A"/>
+        <circle cx="-46" cy="-27" r="4" fill="#8BA07A"/>
+      </g>
+      <text x="134" y="72" font-family="Montserrat,sans-serif" font-size="13" font-weight="700" fill="#8BA07A" letter-spacing="6">PRO HOME</text>
+      <text x="130" y="114" font-family="Montserrat,sans-serif" font-size="46" font-weight="900" fill="white" letter-spacing="2">MEDIA</text>
+      <line x1="130" y1="126" x2="370" y2="126" stroke="#8BA07A" stroke-width="1.5"/>
+      <text x="130" y="146" font-family="Montserrat,sans-serif" font-size="10" font-weight="500" fill="rgba(255,255,255,0.5)" letter-spacing="5">PHOTOGRAPHY · VIDEO</text>
+    </svg>
+    <!-- Dark version: shown when scrolled over cream background -->
+    <svg class="logo-light" width="160" height="58" viewBox="0 0 400 180" xmlns="http://www.w3.org/2000/svg">
+      <g transform="translate(72, 90)">
+        <polygon points="0,-54 46,-27 46,27 0,54 -46,27 -46,-27" stroke="#4A5916" stroke-width="2.5" fill="none"/>
+        <line x1="0" y1="-54" x2="0" y2="-24" stroke="#4A5916" stroke-width="2" stroke-linecap="round"/>
+        <line x1="0" y1="54" x2="0" y2="24" stroke="#4A5916" stroke-width="2" stroke-linecap="round"/>
+        <line x1="46" y1="-27" x2="21" y2="-12" stroke="#4A5916" stroke-width="2" stroke-linecap="round"/>
+        <line x1="-46" y1="-27" x2="-21" y2="-12" stroke="#4A5916" stroke-width="2" stroke-linecap="round"/>
+        <line x1="46" y1="27" x2="21" y2="12" stroke="#4A5916" stroke-width="2" stroke-linecap="round"/>
+        <line x1="-46" y1="27" x2="-21" y2="12" stroke="#4A5916" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="0" cy="0" r="20" fill="#4A5916"/>
+        <circle cx="0" cy="0" r="13" stroke="white" stroke-width="1.5" fill="none"/>
+        <circle cx="-4" cy="-4" r="4" fill="white" opacity="0.4"/>
+        <circle cx="0" cy="-54" r="4" fill="#8BA07A"/>
+        <circle cx="46" cy="-27" r="4" fill="#8BA07A"/>
+        <circle cx="46" cy="27" r="4" fill="#8BA07A"/>
+        <circle cx="0" cy="54" r="4" fill="#8BA07A"/>
+        <circle cx="-46" cy="27" r="4" fill="#8BA07A"/>
+        <circle cx="-46" cy="-27" r="4" fill="#8BA07A"/>
+      </g>
+      <text x="134" y="72" font-family="Montserrat,sans-serif" font-size="13" font-weight="700" fill="#8BA07A" letter-spacing="6">PRO HOME</text>
+      <text x="130" y="114" font-family="Montserrat,sans-serif" font-size="46" font-weight="900" fill="#1A1A1A" letter-spacing="2">MEDIA</text>
+      <line x1="130" y1="126" x2="370" y2="126" stroke="#4A5916" stroke-width="1.5"/>
+      <text x="130" y="146" font-family="Montserrat,sans-serif" font-size="10" font-weight="500" fill="#8BA07A" letter-spacing="5">PHOTOGRAPHY · VIDEO</text>
+    </svg>
+  </a>
+  <div class="nav-links">
+    <a href="#services">Services</a>
+    <a href="#packages">Packages</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="#process">How It Works</a>
+    <a href="#contact">Contact</a>
+    <a href="#contact" class="nav-cta">Book Now</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-left">
+    <p class="hero-eyebrow">South Florida's Premier Real Estate Media</p>
+    <h1 class="hero-title">
+      Every Listing<br>
+      Deserves to<br>
+      <em>Shine.</em>
+    </h1>
+    <p class="hero-desc">
+      Professional photography, cinematic video, drone aerials, and 3D virtual tours — delivered fast and ready for MLS.
+    </p>
+    <div class="hero-btns">
+      <a href="#packages" class="btn-primary">View Packages</a>
+      <a href="#contact" class="btn-ghost"><span>→</span> Book a Shoot</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="stat-num">24h</div>
+        <div class="stat-label">Turnaround</div>
+      </div>
+      <div>
+        <div class="stat-num">4</div>
+        <div class="stat-label">Services</div>
+      </div>
+      <div>
+        <div class="stat-num">FL</div>
+        <div class="stat-label">Statewide</div>
+      </div>
+    </div>
+    <div class="hero-badge" style="position:relative; left:0; bottom:0; margin-top:40px; display:inline-block;">
+      <div class="badge-icon">🚁</div>
+      <div class="badge-text">Drone Included</div>
+      <div class="badge-sub">On every package</div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="photo-grid">
+      <div class="photo-cell large">
+        <img src="https://lh3.googleusercontent.com/d/1Ui9wuZ90e9ujXGf5-qvDOzHotDBcoPso" alt="Real estate photography - exterior">
+      </div>
+      <div class="photo-cell">
+        <img src="https://lh3.googleusercontent.com/d/1kWgtj5QuHde5R4FdoiPtnsumnxrPCVog" alt="Real estate photography - interior">
+      </div>
+      <div class="photo-cell">
+        <img src="https://lh3.googleusercontent.com/d/11qyNLwm2058ri0EdpeTtO6lUIqKC7S4_" alt="Drone aerial photography">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span class="marquee-item">HDR Photography</span>
+    <span class="marquee-item">Drone Aerials</span>
+    <span class="marquee-item">Cinematic Video</span>
+    <span class="marquee-item">Virtual Tours 3D</span>
+    <span class="marquee-item">Virtual Staging</span>
+    <span class="marquee-item">Floor Plans</span>
+    <span class="marquee-item">Social Media Reels</span>
+    <span class="marquee-item">MLS Ready</span>
+    <span class="marquee-item">HDR Photography</span>
+    <span class="marquee-item">Drone Aerials</span>
+    <span class="marquee-item">Cinematic Video</span>
+    <span class="marquee-item">Virtual Tours 3D</span>
+    <span class="marquee-item">Virtual Staging</span>
+    <span class="marquee-item">Floor Plans</span>
+    <span class="marquee-item">Social Media Reels</span>
+    <span class="marquee-item">MLS Ready</span>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="section-header reveal">
+    <div>
+      <p class="section-eyebrow">What We Offer</p>
+      <h2 class="section-title">Everything Your<br><strong>Listing Needs</strong></h2>
+    </div>
+    <p style="max-width:320px; font-size:14px; line-height:1.75; color:var(--gray);">
+      A complete visual media solution for real estate agents — from stunning photography to immersive virtual tours.
+    </p>
+  </div>
+  <div class="services-grid">
+    <div class="service-card reveal reveal-delay-1">
+      <div class="service-number">01</div>
+      <div class="service-icon">📸</div>
+      <div class="service-name">HDR Photography</div>
+      <p class="service-desc">Professionally edited high-dynamic-range photos that capture perfect light in every room. Sky replacement and color correction included.</p>
+    </div>
+    <div class="service-card reveal reveal-delay-2">
+      <div class="service-number">02</div>
+      <div class="service-icon">🚁</div>
+      <div class="service-name">Drone Aerials</div>
+      <p class="service-desc">Stunning aerial photography and video from our FAA-compliant drone. Included in every package — not an extra.</p>
+    </div>
+    <div class="service-card reveal reveal-delay-3">
+      <div class="service-number">03</div>
+      <div class="service-icon">🎬</div>
+      <div class="service-name">Cinematic Video</div>
+      <p class="service-desc">Property walkthrough videos and drone footage edited into compelling reels — perfect for MLS, social media, and your listings page.</p>
+    </div>
+    <div class="service-card reveal reveal-delay-1">
+      <div class="service-number">04</div>
+      <div class="service-icon">🔄</div>
+      <div class="service-name">3D Virtual Tours</div>
+      <p class="service-desc">Immersive Matterport-powered 3D tours captured with our 360° camera. Let buyers explore every room before stepping inside.</p>
+    </div>
+    <div class="service-card reveal reveal-delay-2">
+      <div class="service-number">05</div>
+      <div class="service-icon">🛋️</div>
+      <div class="service-name">Virtual Staging</div>
+      <p class="service-desc">Transform empty rooms into beautifully furnished spaces. Show buyers the full potential of any property — digitally.</p>
+    </div>
+    <div class="service-card reveal reveal-delay-3">
+      <div class="service-number">06</div>
+      <div class="service-icon">📐</div>
+      <div class="service-name">Floor Plans</div>
+      <p class="service-desc">Accurate 2D and near-3D floor plans that help buyers understand layout and flow. Available as add-on to any package.</p>
+    </div>
+  </div>
+</section>
+
+<!-- DIFF BAND -->
+<div class="diff-band reveal">
+  <div class="diff-item">
+    <div class="diff-icon">🚁</div>
+    <div class="diff-num">100%</div>
+    <div class="diff-label">Drone Included</div>
+  </div>
+  <div class="diff-divider"></div>
+  <div class="diff-item">
+    <div class="diff-icon">⚡</div>
+    <div class="diff-num">24h</div>
+    <div class="diff-label">Delivery</div>
+  </div>
+  <div class="diff-divider"></div>
+  <div class="diff-item">
+    <div class="diff-icon">📍</div>
+    <div class="diff-num">FL</div>
+    <div class="diff-label">Statewide Coverage</div>
+  </div>
+  <div class="diff-divider"></div>
+  <div class="diff-item">
+    <div class="diff-icon">✅</div>
+    <div class="diff-num">MLS</div>
+    <div class="diff-label">Ready to Upload</div>
+  </div>
+</div>
+
+<!-- PACKAGES -->
+<section class="packages" id="packages">
+  <div class="section-header reveal">
+    <div>
+      <p class="section-eyebrow">Pricing</p>
+      <h2 class="section-title">Simple,<br><strong>Transparent Pricing</strong></h2>
+    </div>
+    <p style="max-width:320px; font-size:14px; line-height:1.75; color:var(--gray);">
+      No hidden fees. All photos professionally edited and MLS-ready. Drone aerial included in every single package.
+    </p>
+  </div>
+
+  <div class="packages-grid">
+
+    <!-- Essential -->
+    <div class="pkg-card reveal reveal-delay-1">
+      <div class="pkg-name">Essential</div>
+      <div class="pkg-price"><span>$</span>175</div>
+      <div class="pkg-sub">Perfect for condos & small homes</div>
+      <div class="pkg-divider"></div>
+      <ul class="pkg-features">
+        <li>15 HDR Photos (edited)</li>
+        <li>5 Drone Aerial Photos</li>
+        <li>Sky replacement included</li>
+        <li>MLS-ready delivery</li>
+        <li>24h turnaround</li>
+      </ul>
+      <a href="#contact" class="pkg-btn">Get Started</a>
+    </div>
+
+    <!-- Standard -->
+    <div class="pkg-card reveal reveal-delay-2">
+      <div class="pkg-name">Standard</div>
+      <div class="pkg-price"><span>$</span>275</div>
+      <div class="pkg-sub">Most popular for single-family homes</div>
+      <div class="pkg-divider"></div>
+      <ul class="pkg-features">
+        <li>25 HDR Photos (edited)</li>
+        <li>10 Drone Aerial Photos</li>
+        <li>Sky replacement included</li>
+        <li>MLS-ready delivery</li>
+        <li>24h turnaround</li>
+      </ul>
+      <a href="#contact" class="pkg-btn">Get Started</a>
+    </div>
+
+    <!-- Premium -->
+    <div class="pkg-card featured reveal reveal-delay-3">
+      <div class="pkg-badge">Most Popular</div>
+      <div class="pkg-name">Premium</div>
+      <div class="pkg-price"><span>$</span>399</div>
+      <div class="pkg-sub">Full media for standout listings</div>
+      <div class="pkg-divider"></div>
+      <ul class="pkg-features">
+        <li>30 HDR Photos (edited)</li>
+        <li>10 Drone Aerial Photos</li>
+        <li>Drone video footage</li>
+        <li>Property walkthrough video</li>
+        <li>Social media Reel included</li>
+        <li>Floor plan (basic)</li>
+        <li>MLS-ready delivery</li>
+      </ul>
+      <a href="#contact" class="pkg-btn">Get Started</a>
+    </div>
+
+    <!-- Full Media -->
+    <div class="pkg-card reveal reveal-delay-4">
+      <div class="pkg-name">Full Media</div>
+      <div class="pkg-price"><span>$</span>549</div>
+      <div class="pkg-sub">The complete listing package</div>
+      <div class="pkg-divider"></div>
+      <ul class="pkg-features">
+        <li>Everything in Premium</li>
+        <li>Matterport 3D Virtual Tour</li>
+        <li>3 Virtual Stagings</li>
+        <li>Floor plan (premium)</li>
+        <li>Priority scheduling</li>
+        <li>MLS-ready delivery</li>
+      </ul>
+      <a href="#contact" class="pkg-btn">Get Started</a>
+    </div>
+
+  </div>
+
+  <p style="text-align:center; margin-top:24px; font-size:12px; color:var(--gray); letter-spacing:0.05em;">
+    Properties over 5,000 sq ft add $50 · All packages include professional editing
+  </p>
+</section>
+
+<!-- ADD ONS -->
+<section class="addons" id="addons">
+  <h3 class="addons-title reveal">Customize Your Package</h3>
+  <div class="addons-grid">
+    <div class="addon-item reveal reveal-delay-1">
+      <div class="addon-left">
+        <div class="addon-icon">📐</div>
+        <div>
+          <div class="addon-name">Floor Plan Basic</div>
+          <div class="addon-detail">2D layout</div>
+        </div>
+      </div>
+      <div class="addon-price">$25</div>
+    </div>
+    <div class="addon-item reveal reveal-delay-2">
+      <div class="addon-left">
+        <div class="addon-icon">📋</div>
+        <div>
+          <div class="addon-name">Floor Plan Enhanced</div>
+          <div class="addon-detail">Detailed 2D</div>
+        </div>
+      </div>
+      <div class="addon-price">$40</div>
+    </div>
+    <div class="addon-item reveal reveal-delay-3">
+      <div class="addon-left">
+        <div class="addon-icon">🏗️</div>
+        <div>
+          <div class="addon-name">Floor Plan Premium</div>
+          <div class="addon-detail">Near-3D (+$20 over 3k sqft)</div>
+        </div>
+      </div>
+      <div class="addon-price">$55</div>
+    </div>
+    <div class="addon-item reveal reveal-delay-4">
+      <div class="addon-left">
+        <div class="addon-icon">🛋️</div>
+        <div>
+          <div class="addon-name">Virtual Staging</div>
+          <div class="addon-detail">Per photo</div>
+        </div>
+      </div>
+      <div class="addon-price">$40</div>
+    </div>
+    <div class="addon-item reveal reveal-delay-1">
+      <div class="addon-left">
+        <div class="addon-icon">📸</div>
+        <div>
+          <div class="addon-name">Extra Photos</div>
+          <div class="addon-detail">Per additional photo</div>
+        </div>
+      </div>
+      <div class="addon-price">$8</div>
+    </div>
+    <div class="addon-item reveal reveal-delay-2">
+      <div class="addon-left">
+        <div class="addon-icon">🌇</div>
+        <div>
+          <div class="addon-name">Twilight Exterior</div>
+          <div class="addon-detail">Golden hour shot</div>
+        </div>
+      </div>
+      <div class="addon-price">$25</div>
+    </div>
+    <div class="addon-item reveal reveal-delay-3">
+      <div class="addon-left">
+        <div class="addon-icon">🗑️</div>
+        <div>
+          <div class="addon-name">Object Removal</div>
+          <div class="addon-detail">Per object</div>
+        </div>
+      </div>
+      <div class="addon-price">$15</div>
+    </div>
+    <div class="addon-item reveal reveal-delay-4">
+      <div class="addon-left">
+        <div class="addon-icon">💬</div>
+        <div>
+          <div class="addon-name">Need something custom?</div>
+          <div class="addon-detail">Let's talk</div>
+        </div>
+      </div>
+      <div class="addon-price" style="font-size:14px; color:var(--green-light);">Ask us</div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED WORK -->
+<section class="featured" id="portfolio">
+  <div class="section-header reveal">
+    <div>
+      <p class="section-eyebrow">Our Work</p>
+      <h2 class="section-title">Featured<br><strong>Properties</strong></h2>
+    </div>
+    <p style="max-width:300px; font-size:14px; line-height:1.75; color:var(--gray);">
+      A selection of recent shoots across South Florida — photography, drone aerials, and more.
+    </p>
+  </div>
+
+  <div class="featured-grid reveal">
+    <!-- Large left card -->
+    <a href="portfolio.html" class="featured-card tall">
+      <img src="https://lh3.googleusercontent.com/d/1mr2WyglRHkvHkQP4CD38jduW9vyJCAD6" alt="Cape Coral aerial">
+      <div class="featured-card-overlay"></div>
+      <div class="featured-card-body">
+        <span class="featured-card-type">Single Family</span>
+        <div class="featured-card-addr">Cape Coral, FL</div>
+        <div class="featured-card-sub">9 SW 14th Ave · 16 photos</div>
+        <div class="featured-services">
+          <span class="fs-tag fs-hdr">HDR</span>
+          <span class="fs-tag fs-drone">Drone</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- Top right -->
+    <a href="portfolio.html" class="featured-card">
+      <img src="https://lh3.googleusercontent.com/d/1seCEkaGIplR9nY02PFVdu3_VuG6i8bFn" alt="Southwest Ranches luxury estate">
+      <div class="featured-card-overlay"></div>
+      <div class="featured-card-body">
+        <span class="featured-card-type">Luxury Estate</span>
+        <div class="featured-card-addr">Southwest Ranches, FL</div>
+        <div class="featured-card-sub">Botaniko · 14 photos</div>
+        <div class="featured-services">
+          <span class="fs-tag fs-hdr">HDR</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- Bottom right -->
+    <a href="portfolio.html" class="featured-card">
+      <img src="https://lh3.googleusercontent.com/d/12fNPex0uaOgkzaOY234-uOT7COPkiMAe" alt="Miami condominium">
+      <div class="featured-card-overlay"></div>
+      <div class="featured-card-body">
+        <span class="featured-card-type">Condominium</span>
+        <div class="featured-card-addr">Miami, FL</div>
+        <div class="featured-card-sub">Landmark at Doral · 13 photos</div>
+        <div class="featured-services">
+          <span class="fs-tag fs-hdr">HDR</span>
+          <span class="fs-tag fs-drone">Drone</span>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="featured-cta reveal">
+    <a href="portfolio.html" class="btn-portfolio">
+      View Full Portfolio <span class="arrow">→</span>
+    </a>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process" id="process">
+  <div class="section-header reveal">
+    <div>
+      <p class="section-eyebrow">How It Works</p>
+      <h2 class="section-title">Simple<br><strong>4-Step Process</strong></h2>
+    </div>
+  </div>
+  <div class="process-steps">
+    <div class="process-step reveal reveal-delay-1">
+      <div class="step-num">1</div>
+      <div class="step-title">Book Online</div>
+      <p class="step-desc">Choose your package and pick a date that works. Book via WhatsApp or Calendly in under 2 minutes.</p>
+    </div>
+    <div class="process-step reveal reveal-delay-2">
+      <div class="step-num">2</div>
+      <div class="step-title">We Show Up</div>
+      <p class="step-desc">Our photographer arrives on time, fully equipped — camera, drone, and 360° camera ready to go.</p>
+    </div>
+    <div class="process-step reveal reveal-delay-3">
+      <div class="step-num">3</div>
+      <div class="step-title">We Edit</div>
+      <p class="step-desc">Every photo is professionally edited with HDR processing, sky replacement, and color correction.</p>
+    </div>
+    <div class="process-step reveal reveal-delay-4">
+      <div class="step-num">4</div>
+      <div class="step-title">You Receive</div>
+      <p class="step-desc">Your media is delivered within 24 hours — MLS-ready, high-resolution, and ready to impress buyers.</p>
+    </div>
+  </div>
+</section>
+
+<!-- COVERAGE -->
+<div class="coverage reveal">
+  <div class="coverage-text">
+    <p class="eyebrow">Coverage Area</p>
+    <h2>We Come<br>To You.</h2>
+    <p>Based in South Florida, we travel throughout the state. From Miami-Dade to Orlando and Cape Coral — no market is too far.</p>
+  </div>
+  <div class="coverage-areas">
+    <span class="area-tag">Miami-Dade</span>
+    <span class="area-tag">Broward</span>
+    <span class="area-tag">Palm Beach</span>
+    <span class="area-tag">Fort Lauderdale</span>
+    <span class="area-tag">Boca Raton</span>
+    <span class="area-tag">West Palm Beach</span>
+    <span class="area-tag">Naples</span>
+    <span class="area-tag">Fort Myers</span>
+    <span class="area-tag">Cape Coral</span>
+    <span class="area-tag">Orlando</span>
+    <span class="area-tag">Tampa</span>
+    <span class="area-tag">& More</span>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact-left reveal">
+    <p class="section-eyebrow">Get In Touch</p>
+    <h2>Ready to Book<br>Your Shoot?</h2>
+    <p>Reach out via WhatsApp for the fastest response, or fill out the form and we'll get back to you within a few hours.</p>
+    <div class="contact-methods">
+      <a href="https://wa.me/17862085633" class="contact-method" target="_blank">
+        <div class="method-icon">📱</div>
+        <div>
+          <div class="method-label">WhatsApp (Fastest)</div>
+          <div class="method-value">(786) 208-5633</div>
+        </div>
+      </a>
+      <a href="tel:17862085633" class="contact-method">
+        <div class="method-icon">📞</div>
+        <div>
+          <div class="method-label">Call Us</div>
+          <div class="method-value">(786) 208-5633</div>
+        </div>
+      </a>
+      <a href="mailto:Novoaluis19@gmail.com" class="contact-method">
+        <div class="method-icon">✉️</div>
+        <div>
+          <div class="method-label">Email</div>
+          <div class="method-value">Novoaluis19@gmail.com</div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <form class="contact-form reveal reveal-delay-2" id="contactForm"
+        action="https://formspree.io/f/xwvzzqyy"
+        method="POST">
+    <div class="form-title">Request a Quote</div>
+    <div data-fs-success style="display:none">✓ Message sent! We'll be in touch within a few hours.</div>
+    <div data-fs-error style="display:none"></div>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input id="firstName" type="text" name="first_name" placeholder="Luis" required data-fs-field>
+        <span data-fs-error="first_name"></span>
+      </div>
+      <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input id="lastName" type="text" name="last_name" placeholder="Novo" required data-fs-field>
+        <span data-fs-error="last_name"></span>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input id="email" type="email" name="email" placeholder="agent@brokerage.com" required data-fs-field>
+      <span data-fs-error="email"></span>
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone</label>
+      <input id="phone" type="tel" name="phone" placeholder="(786) 000-0000" data-fs-field>
+    </div>
+    <div class="form-group">
+      <label for="package">Package Interested In</label>
+      <select id="package" name="package" data-fs-field>
+        <option value="">Select a package...</option>
+        <option>Essential — $175</option>
+        <option>Standard — $275</option>
+        <option>Premium — $399</option>
+        <option>Full Media — $549</option>
+        <option>Custom / Not sure yet</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="address">Property Address</label>
+      <input id="address" type="text" name="property_address" placeholder="123 Main St, Miami, FL" data-fs-field>
+    </div>
+    <div class="form-group">
+      <label for="notes">Additional Notes</label>
+      <textarea id="notes" name="notes" placeholder="Tell us about the property, special requests, preferred dates..." data-fs-field></textarea>
+    </div>
+    <button type="submit" class="form-submit" data-fs-submit-btn>Send Request →</button>
+  </form>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <svg width="180" height="80" viewBox="0 0 260 120" xmlns="http://www.w3.org/2000/svg" style="margin-bottom:16px; display:block;">
+        <g transform="translate(46, 60)">
+          <polygon points="0,-36 31,-18 31,18 0,36 -31,18 -31,-18" stroke="white" stroke-width="2" fill="none"/>
+          <line x1="0" y1="-36" x2="0" y2="-16" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="0" y1="36" x2="0" y2="16" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="31" y1="-18" x2="14" y2="-8" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="-31" y1="-18" x2="-14" y2="-8" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="31" y1="18" x2="14" y2="8" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="-31" y1="18" x2="-14" y2="8" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+          <circle cx="0" cy="0" r="14" stroke="white" stroke-width="1" fill="none" opacity="0.3"/>
+          <circle cx="0" cy="0" r="9" stroke="#8BA07A" stroke-width="1" fill="none"/>
+          <circle cx="-3" cy="-3" r="3" fill="white" opacity="0.3"/>
+          <circle cx="0" cy="-36" r="3" fill="#8BA07A"/>
+          <circle cx="31" cy="-18" r="3" fill="#8BA07A"/>
+          <circle cx="31" cy="18" r="3" fill="#8BA07A"/>
+          <circle cx="0" cy="36" r="3" fill="#8BA07A"/>
+          <circle cx="-31" cy="18" r="3" fill="#8BA07A"/>
+          <circle cx="-31" cy="-18" r="3" fill="#8BA07A"/>
+        </g>
+        <text x="92" y="48" font-family="Montserrat,sans-serif" font-size="8" font-weight="700" fill="#8BA07A" letter-spacing="4">PRO HOME</text>
+        <text x="89" y="74" font-family="Montserrat,sans-serif" font-size="28" font-weight="900" fill="white" letter-spacing="1">MEDIA</text>
+        <text x="89" y="90" font-family="Montserrat,sans-serif" font-size="6.5" font-weight="500" fill="#666" letter-spacing="3">PHOTOGRAPHY · VIDEO</text>
+      </svg>
+      <p>Professional real estate media serving South Florida and beyond. Part of the Pro Home family of companies.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Services</h4>
+      <a href="#services">HDR Photography</a>
+      <a href="#services">Drone Aerials</a>
+      <a href="#services">Cinematic Video</a>
+      <a href="#services">3D Virtual Tours</a>
+      <a href="#services">Virtual Staging</a>
+    </div>
+    <div class="footer-links">
+      <h4>Company</h4>
+      <a href="#packages">Packages & Pricing</a>
+      <a href="#process">How It Works</a>
+      <a href="#contact">Book a Shoot</a>
+      <a href="tel:17862085633">(786) 208-5633</a>
+    </div>
+    <div class="footer-links">
+      <h4>Pro Home Family</h4>
+      <a href="#">Pro Home Adviser</a>
+      <a href="#">Pro Home Inspection</a>
+      <a href="#">Pro Home Management</a>
+      <a href="#">Pro Home Media</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2025 Pro Home Media. All rights reserved.</div>
+    <div class="footer-umbrella">Part of the <span>Pro Home</span> family of companies</div>
+  </div>
+</footer>
+
+<!-- WhatsApp floating button -->
+<a href="https://wa.me/17862085633?text=Hi%2C%20I%27m%20interested%20in%20booking%20a%20real%20estate%20shoot%20with%20Pro%20Home%20Media."
+   class="whatsapp-fab" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 32 32" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <path d="M16 2C8.268 2 2 8.268 2 16c0 2.432.638 4.715 1.756 6.693L2 30l7.535-1.724A13.924 13.924 0 0016 30c7.732 0 14-6.268 14-14S23.732 2 16 2zm0 25.5a11.45 11.45 0 01-5.84-1.598l-.418-.249-4.473 1.022 1.054-4.355-.273-.447A11.43 11.43 0 014.5 16C4.5 9.596 9.596 4.5 16 4.5S27.5 9.596 27.5 16 22.404 27.5 16 27.5zM22.71 19.15c-.34-.17-2.006-.99-2.317-1.103-.311-.113-.537-.17-.763.17-.226.34-.875 1.103-1.072 1.33-.198.226-.396.255-.736.085-.34-.17-1.435-.53-2.733-1.686-1.01-.9-1.69-2.013-1.888-2.353-.198-.34-.021-.523.149-.693.153-.152.34-.397.51-.595.17-.198.226-.34.34-.566.113-.226.056-.425-.028-.595-.085-.17-.763-1.84-1.044-2.52-.275-.66-.554-.57-.763-.58l-.65-.011c-.226 0-.594.085-.905.425-.311.34-1.187 1.16-1.187 2.829s1.215 3.28 1.384 3.507c.17.226 2.39 3.648 5.79 5.118.81.35 1.441.558 1.933.714.812.258 1.55.221 2.134.134.651-.097 2.006-.82 2.288-1.611.283-.791.283-1.468.198-1.61-.085-.141-.311-.226-.651-.397z"/>
+  </svg>
+</a>
+
+<script>
+// Custom cursor
+const cursor = document.getElementById('cursor');
+const ring = document.getElementById('cursorRing');
+let mx = 0, my = 0, rx = 0, ry = 0;
+document.addEventListener('mousemove', e => {
+  mx = e.clientX; my = e.clientY;
+  cursor.style.left = mx + 'px';
+  cursor.style.top = my + 'px';
+});
+function animRing() {
+  rx += (mx - rx) * 0.12;
+  ry += (my - ry) * 0.12;
+  ring.style.left = rx + 'px';
+  ring.style.top = ry + 'px';
+  requestAnimationFrame(animRing);
+}
+animRing();
+document.querySelectorAll('a, button, .service-card, .pkg-card, .addon-item, .process-step, .area-tag').forEach(el => {
+  el.addEventListener('mouseenter', () => ring.classList.add('hover'));
+  el.addEventListener('mouseleave', () => ring.classList.remove('hover'));
+});
+
+// Nav scroll
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 40);
+});
+
+// Scroll reveal
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('visible'); }
+  });
+}, { threshold: 0.12 });
+reveals.forEach(el => observer.observe(el));
+
+// Formspree AJAX — https://github.com/formspree/formspree-js/tree/master/packages/formspree-ajax
+window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+formspree('initForm', { formElement: '#contactForm', formId: 'xwvzzqyy' });
+</script>
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+
+</body>
+</html>

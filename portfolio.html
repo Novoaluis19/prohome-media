@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio — Pro Home Media | Real Estate Photography South Florida</title>
+<meta name="description" content="Browse Pro Home Media's portfolio of real estate photography, drone aerials, and cinematic video across South Florida.">
+<meta property="og:title" content="Portfolio — Pro Home Media">
+<meta property="og:description" content="Real estate photography, drone aerials, and cinematic video across South Florida.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://prohomemedia.com/portfolio.html">
+<meta property="og:image" content="https://lh3.googleusercontent.com/d/1mr2WyglRHkvHkQP4CD38jduW9vyJCAD6">
+<meta name="twitter:card" content="summary_large_image">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-24VMWXKXZ0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-24VMWXKXZ0');
+</script>
+<link rel="canonical" href="https://prohomemedia.com/portfolio.html">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpolygon points='32,4 58,18 58,46 32,60 6,46 6,18' fill='%234A5916' stroke='%238BA07A' stroke-width='2'/%3E%3Ccircle cx='32' cy='32' r='11' fill='none' stroke='white' stroke-width='2'/%3E%3Ccircle cx='32' cy='32' r='7' fill='none' stroke='%238BA07A' stroke-width='1.5'/%3E%3Ccircle cx='28' cy='28' r='3' fill='white' opacity='0.5'/%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500;600&family=Montserrat:wght@500;700;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --green: #4A5916;
+  --green-dark: #2e3a0d;
+  --green-light: #8BA07A;
+  --cream: #F5F0E8;
+  --cream-dark: #EAE4D8;
+  --black: #1A1A1A;
+  --white: #FFFFFF;
+  --gray: #6B6B6B;
+  --gray-light: #D4D0C8;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream);
+  color: var(--black);
+  overflow-x: hidden;
+  cursor: none;
+}
+
+/* Cursor */
+.cursor { width: 12px; height: 12px; background: var(--green); border-radius: 50%; position: fixed; pointer-events: none; z-index: 9999; transform: translate(-50%,-50%); transition: transform .15s ease; }
+.cursor-ring { width: 36px; height: 36px; border: 1.5px solid var(--green); border-radius: 50%; position: fixed; pointer-events: none; z-index: 9998; transform: translate(-50%,-50%); transition: width .3s, height .3s, opacity .3s; }
+.cursor-ring.hover { width: 56px; height: 56px; opacity: .5; }
+
+/* NAV */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  padding: 16px 60px;
+  display: flex; align-items: center; justify-content: space-between;
+  transition: background .4s, padding .4s, box-shadow .4s;
+}
+nav.scrolled {
+  background: rgba(245,240,232,0.97);
+  backdrop-filter: blur(12px);
+  padding: 12px 60px;
+  box-shadow: 0 1px 24px rgba(74,89,22,.10);
+}
+.nav-logo { display: flex; align-items: center; text-decoration: none; }
+.nav-logo .logo-light { display: none; }
+.nav-logo .logo-white { display: block; }
+nav.scrolled .nav-logo .logo-light { display: block; }
+nav.scrolled .nav-logo .logo-white { display: none; }
+
+.nav-links { display: flex; align-items: center; gap: 36px; }
+.nav-links a {
+  font-size: 13px; font-weight: 500; letter-spacing: .06em; text-transform: uppercase;
+  color: white; text-decoration: none; transition: color .2s; position: relative;
+}
+nav.scrolled .nav-links a { color: var(--black); }
+.nav-links a::after {
+  content: ''; position: absolute; bottom: -4px; left: 0; right: 0;
+  height: 1.5px; background: var(--green-light);
+  transform: scaleX(0); transform-origin: left; transition: transform .3s ease;
+}
+nav.scrolled .nav-links a::after { background: var(--green); }
+.nav-links a:hover::after { transform: scaleX(1); }
+.nav-links a:hover { color: var(--green-light); }
+nav.scrolled .nav-links a:hover { color: var(--green); }
+.nav-links a.active-page { color: var(--green-light) !important; }
+nav.scrolled .nav-links a.active-page { color: var(--green) !important; }
+
+.nav-cta {
+  background: rgba(255,255,255,.15) !important; color: white !important;
+  border: 1.5px solid rgba(255,255,255,.5) !important;
+  padding: 10px 22px; border-radius: 6px;
+  font-size: 12px !important; letter-spacing: .1em !important;
+}
+.nav-cta::after { display: none !important; }
+.nav-cta:hover { background: white !important; color: var(--green) !important; border-color: white !important; }
+nav.scrolled .nav-cta { background: var(--green) !important; color: white !important; border-color: var(--green) !important; }
+nav.scrolled .nav-cta:hover { background: var(--green-dark) !important; }
+
+/* PORTFOLIO HERO */
+.port-hero {
+  background: var(--green);
+  padding: 160px 80px 100px;
+  position: relative;
+  overflow: hidden;
+}
+.port-hero::before {
+  content: '';
+  position: absolute; top: -80px; right: -80px;
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(139,160,122,.2) 0%, transparent 70%);
+}
+.port-hero::after {
+  content: 'OUR WORK';
+  position: absolute;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 180px; font-weight: 700;
+  color: rgba(255,255,255,.04);
+  right: 60px; bottom: -20px;
+  letter-spacing: -.02em;
+  pointer-events: none;
+  white-space: nowrap;
+}
+.port-hero .eyebrow {
+  font-size: 10px; font-weight: 600; letter-spacing: .25em; text-transform: uppercase;
+  color: var(--green-light); margin-bottom: 20px;
+  opacity: 0; animation: fadeUp .8s ease .2s forwards;
+}
+.port-hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(48px, 5vw, 80px); font-weight: 300; line-height: 1.05;
+  color: var(--white); margin-bottom: 24px;
+  opacity: 0; animation: fadeUp .8s ease .4s forwards;
+}
+.port-hero h1 em { font-style: italic; color: var(--green-light); }
+.port-hero p {
+  font-size: 15px; line-height: 1.75; color: rgba(255,255,255,.65);
+  max-width: 480px;
+  opacity: 0; animation: fadeUp .8s ease .6s forwards;
+}
+.port-stats {
+  display: flex; gap: 48px; margin-top: 56px; padding-top: 40px;
+  border-top: 1px solid rgba(255,255,255,.12);
+  opacity: 0; animation: fadeUp .8s ease .8s forwards;
+}
+.port-stat-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 40px; font-weight: 600; color: var(--white); line-height: 1;
+}
+.port-stat-label {
+  font-size: 10px; letter-spacing: .15em; text-transform: uppercase;
+  color: var(--green-light); margin-top: 6px;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* FILTERS */
+.filters-wrap {
+  background: var(--white);
+  padding: 32px 80px;
+  display: flex; align-items: center; justify-content: space-between;
+  border-bottom: 1px solid var(--cream-dark);
+  position: sticky; top: 65px; z-index: 50;
+  transition: top .4s;
+}
+.filter-tabs { display: flex; gap: 8px; }
+.filter-btn {
+  padding: 9px 20px;
+  background: transparent;
+  border: 1.5px solid var(--cream-dark);
+  border-radius: 24px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--gray); cursor: pointer;
+  transition: all .2s;
+}
+.filter-btn:hover { border-color: var(--green-light); color: var(--green); }
+.filter-btn.active { background: var(--green); border-color: var(--green); color: white; }
+
+.type-filters { display: flex; gap: 8px; align-items: center; }
+.type-filters span { font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: var(--gray); margin-right: 4px; }
+.type-btn {
+  padding: 6px 14px;
+  background: transparent; border: 1px solid var(--gray-light);
+  border-radius: 20px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--gray); cursor: pointer; transition: all .2s;
+}
+.type-btn:hover { border-color: var(--green-light); color: var(--green); }
+.type-btn.active { background: var(--green-light); border-color: var(--green-light); color: white; }
+
+/* GRID */
+.portfolio-section { padding: 64px 80px 120px; }
+.portfolio-count {
+  font-size: 11px; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--gray); margin-bottom: 40px;
+}
+.portfolio-count span { color: var(--green); font-weight: 600; }
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.listing-card {
+  background: var(--white);
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform .3s, box-shadow .3s;
+  border: 1.5px solid transparent;
+}
+.listing-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 60px rgba(74,89,22,.14);
+  border-color: var(--green-light);
+}
+.listing-card.hidden { display: none; }
+
+.card-img {
+  position: relative;
+  height: 240px;
+  overflow: hidden;
+  background: var(--cream-dark);
+}
+.card-img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform .6s ease;
+  filter: saturate(.92);
+}
+.listing-card:hover .card-img img { transform: scale(1.06); }
+
+.card-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(26,26,26,.6) 0%, transparent 50%);
+  opacity: 0; transition: opacity .3s;
+  display: flex; align-items: center; justify-content: center;
+}
+.listing-card:hover .card-overlay { opacity: 1; }
+.overlay-cta {
+  background: white; color: var(--green);
+  padding: 10px 24px; border-radius: 24px;
+  font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+  transform: translateY(8px); transition: transform .3s;
+}
+.listing-card:hover .overlay-cta { transform: translateY(0); }
+
+.card-type-badge {
+  position: absolute; top: 16px; left: 16px;
+  background: rgba(255,255,255,.92);
+  backdrop-filter: blur(8px);
+  padding: 4px 12px; border-radius: 20px;
+  font-size: 9px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--green);
+}
+.card-photo-count {
+  position: absolute; top: 16px; right: 16px;
+  background: rgba(26,26,26,.65);
+  backdrop-filter: blur(8px);
+  padding: 4px 10px; border-radius: 20px;
+  font-size: 10px; font-weight: 500; color: white; letter-spacing: .04em;
+}
+
+.card-body { padding: 20px 24px 24px; }
+.card-address {
+  font-size: 14px; font-weight: 600; color: var(--black);
+  margin-bottom: 4px;
+}
+.card-type-label { font-size: 11px; color: var(--gray); margin-bottom: 16px; }
+
+.card-services { display: flex; gap: 6px; }
+.service-tag {
+  padding: 4px 10px; border-radius: 12px;
+  font-size: 9px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+}
+.tag-hdr { background: #e8efe0; color: var(--green); }
+.tag-drone { background: #e0e8f5; color: #2a4a8a; }
+.tag-video { background: #f5e8e0; color: #8a2a2a; }
+.tag-staging { background: #f5e0f0; color: #6a2a8a; }
+.tag-tour { background: #e0f5f0; color: #2a8a6a; }
+
+/* LIGHTBOX */
+.lightbox {
+  position: fixed; inset: 0; z-index: 1000;
+  background: rgba(10,10,10,.96);
+  display: none; flex-direction: column;
+  align-items: center; justify-content: center;
+}
+.lightbox.open { display: flex; }
+
+.lb-header {
+  position: absolute; top: 0; left: 0; right: 0;
+  padding: 20px 32px;
+  display: flex; align-items: center; justify-content: space-between;
+  background: linear-gradient(to bottom, rgba(0,0,0,.6) 0%, transparent 100%);
+}
+.lb-title { color: white; }
+.lb-title .lb-address { font-size: 15px; font-weight: 600; }
+.lb-title .lb-counter { font-size: 11px; color: rgba(255,255,255,.5); letter-spacing: .1em; margin-top: 2px; }
+
+.lb-close {
+  width: 44px; height: 44px;
+  background: rgba(255,255,255,.1);
+  border: 1px solid rgba(255,255,255,.2);
+  border-radius: 50%; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  color: white; font-size: 20px;
+  transition: background .2s;
+}
+.lb-close:hover { background: rgba(255,255,255,.2); }
+
+.lb-main {
+  width: 100%; height: 100%;
+  display: flex; align-items: center; justify-content: center;
+  padding: 80px 80px 160px;
+  position: relative;
+}
+.lb-img-wrap {
+  max-width: 1100px; max-height: 100%;
+  display: flex; align-items: center; justify-content: center;
+}
+.lb-img-wrap img {
+  max-width: 100%; max-height: calc(100vh - 240px);
+  object-fit: contain;
+  border-radius: 4px;
+  transition: opacity .2s;
+}
+.lb-img-wrap img.loading { opacity: .3; }
+
+.lb-type-label {
+  position: absolute; bottom: 168px; left: 50%; transform: translateX(-50%);
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.15);
+  color: rgba(255,255,255,.7);
+  padding: 4px 14px; border-radius: 20px;
+  font-size: 10px; letter-spacing: .12em; text-transform: uppercase;
+}
+
+.lb-nav {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  display: flex; gap: 0;
+  width: 100%; padding: 0 24px;
+  justify-content: space-between;
+  pointer-events: none;
+}
+.lb-btn {
+  width: 52px; height: 52px;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: 50%;
+  color: white; font-size: 22px;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: background .2s, transform .2s;
+  pointer-events: all;
+  user-select: none;
+}
+.lb-btn:hover { background: rgba(255,255,255,.18); transform: scale(1.05); }
+.lb-btn:active { transform: scale(.95); }
+
+/* Thumbnail strip */
+.lb-thumbs {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  padding: 16px 32px 24px;
+  background: linear-gradient(to top, rgba(0,0,0,.8) 0%, transparent 100%);
+  display: flex; gap: 8px;
+  overflow-x: auto;
+  justify-content: center;
+  scrollbar-width: none;
+}
+.lb-thumbs::-webkit-scrollbar { display: none; }
+.lb-thumb {
+  width: 64px; height: 48px;
+  border-radius: 6px; overflow: hidden;
+  flex-shrink: 0;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border-color .2s, opacity .2s;
+  opacity: .55;
+}
+.lb-thumb:hover { opacity: .8; }
+.lb-thumb.active { border-color: var(--green-light); opacity: 1; }
+.lb-thumb img { width: 100%; height: 100%; object-fit: cover; }
+
+/* REVEAL */
+.reveal { opacity: 0; transform: translateY(32px); transition: opacity .7s ease, transform .7s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* EMPTY STATE */
+.empty-state {
+  grid-column: 1/-1;
+  text-align: center;
+  padding: 80px 40px;
+  display: none;
+}
+.empty-state.show { display: block; }
+.empty-state h3 { font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 300; color: var(--gray); margin-bottom: 12px; }
+.empty-state p { font-size: 14px; color: var(--gray-light); }
+
+/* FOOTER */
+footer { background: var(--black); padding: 60px 80px 40px; }
+.footer-top {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,.08); margin-bottom: 32px;
+}
+.footer-brand p { font-size: 13px; line-height: 1.7; color: rgba(255,255,255,.45); max-width: 280px; margin-top: 16px; }
+.footer-links h4 { font-size: 10px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: var(--green-light); margin-bottom: 20px; }
+.footer-links a { display: block; font-size: 13px; color: rgba(255,255,255,.5); text-decoration: none; margin-bottom: 10px; transition: color .2s; }
+.footer-links a:hover { color: var(--white); }
+.footer-bottom { display: flex; justify-content: space-between; align-items: center; }
+.footer-copy { font-size: 12px; color: rgba(255,255,255,.3); }
+.footer-umbrella { font-size: 11px; color: rgba(255,255,255,.3); }
+.footer-umbrella span { color: var(--green-light); }
+
+/* MOBILE */
+@media (max-width: 768px) {
+  nav { padding: 20px 24px; }
+  nav.scrolled { padding: 14px 24px; }
+  .nav-links { display: none; }
+  .port-hero { padding: 120px 32px 72px; }
+  .port-stats { gap: 28px; }
+  .filters-wrap { padding: 20px 24px; flex-direction: column; gap: 16px; align-items: flex-start; }
+  .portfolio-section { padding: 40px 24px 80px; }
+  .portfolio-grid { grid-template-columns: 1fr; }
+  footer { padding: 48px 32px 32px; }
+  .footer-top { flex-direction: column; gap: 40px; }
+  .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+  .lb-main { padding: 80px 16px 160px; }
+  .lb-btn { width: 40px; height: 40px; font-size: 18px; }
+  .lb-thumbs { padding: 12px 16px 20px; }
+}
+
+/* WhatsApp floating button */
+.whatsapp-fab {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 500;
+  width: 58px;
+  height: 58px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(37,211,102,.45);
+  text-decoration: none;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.whatsapp-fab:hover {
+  transform: scale(1.1) translateY(-2px);
+  box-shadow: 0 8px 32px rgba(37,211,102,.55);
+}
+.whatsapp-fab svg { width: 30px; height: 30px; }
+</style>
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="index.html" class="nav-logo">
+    <svg class="logo-white" width="160" height="58" viewBox="0 0 400 180" xmlns="http://www.w3.org/2000/svg">
+      <g transform="translate(72, 90)">
+        <polygon points="0,-54 46,-27 46,27 0,54 -46,27 -46,-27" stroke="white" stroke-width="2.5" fill="none"/>
+        <line x1="0" y1="-54" x2="0" y2="-24" stroke="white" stroke-width="2" stroke-linecap="round"/>
+        <line x1="0" y1="54" x2="0" y2="24" stroke="white" stroke-width="2" stroke-linecap="round"/>
+        <line x1="46" y1="-27" x2="21" y2="-12" stroke="white" stroke-width="2" stroke-linecap="round"/>
+        <line x1="-46" y1="-27" x2="-21" y2="-12" stroke="white" stroke-width="2" stroke-linecap="round"/>
+        <line x1="46" y1="27" x2="21" y2="12" stroke="white" stroke-width="2" stroke-linecap="round"/>
+        <line x1="-46" y1="27" x2="-21" y2="12" stroke="white" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="0" cy="0" r="20" fill="white" opacity="0.15"/>
+        <circle cx="0" cy="0" r="20" stroke="white" stroke-width="1.5" fill="none"/>
+        <circle cx="0" cy="0" r="13" stroke="#8BA07A" stroke-width="1.5" fill="none"/>
+        <circle cx="-4" cy="-4" r="4" fill="white" opacity="0.35"/>
+        <circle cx="0" cy="-54" r="4" fill="#8BA07A"/>
+        <circle cx="46" cy="-27" r="4" fill="#8BA07A"/>
+        <circle cx="46" cy="27" r="4" fill="#8BA07A"/>
+        <circle cx="0" cy="54" r="4" fill="#8BA07A"/>
+        <circle cx="-46" cy="27" r="4" fill="#8BA07A"/>
+        <circle cx="-46" cy="-27" r="4" fill="#8BA07A"/>
+      </g>
+      <text x="134" y="72" font-family="Montserrat,sans-serif" font-size="13" font-weight="700" fill="#8BA07A" letter-spacing="6">PRO HOME</text>
+      <text x="130" y="114" font-family="Montserrat,sans-serif" font-size="46" font-weight="900" fill="white" letter-spacing="2">MEDIA</text>
+      <line x1="130" y1="126" x2="370" y2="126" stroke="#8BA07A" stroke-width="1.5"/>
+      <text x="130" y="146" font-family="Montserrat,sans-serif" font-size="10" font-weight="500" fill="rgba(255,255,255,0.5)" letter-spacing="5">PHOTOGRAPHY · VIDEO</text>
+    </svg>
+    <svg class="logo-light" width="160" height="58" viewBox="0 0 400 180" xmlns="http://www.w3.org/2000/svg">
+      <g transform="translate(72, 90)">
+        <polygon points="0,-54 46,-27 46,27 0,54 -46,27 -46,-27" stroke="#4A5916" stroke-width="2.5" fill="none"/>
+        <line x1="0" y1="-54" x2="0" y2="-24" stroke="#4A5916" stroke-width="2" stroke-linecap="round"/>
+        <line x1="0" y1="54" x2="0" y2="24" stroke="#4A5916" stroke-width="2" stroke-linecap="round"/>
+        <line x1="46" y1="-27" x2="21" y2="-12" stroke="#4A5916" stroke-width="2" stroke-linecap="round"/>
+        <line x1="-46" y1="-27" x2="-21" y2="-12" stroke="#4A5916" stroke-width="2" stroke-linecap="round"/>
+        <line x1="46" y1="27" x2="21" y2="12" stroke="#4A5916" stroke-width="2" stroke-linecap="round"/>
+        <line x1="-46" y1="27" x2="-21" y2="12" stroke="#4A5916" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="0" cy="0" r="20" fill="#4A5916"/>
+        <circle cx="0" cy="0" r="13" stroke="white" stroke-width="1.5" fill="none"/>
+        <circle cx="-4" cy="-4" r="4" fill="white" opacity="0.4"/>
+        <circle cx="0" cy="-54" r="4" fill="#8BA07A"/>
+        <circle cx="46" cy="-27" r="4" fill="#8BA07A"/>
+        <circle cx="46" cy="27" r="4" fill="#8BA07A"/>
+        <circle cx="0" cy="54" r="4" fill="#8BA07A"/>
+        <circle cx="-46" cy="27" r="4" fill="#8BA07A"/>
+        <circle cx="-46" cy="-27" r="4" fill="#8BA07A"/>
+      </g>
+      <text x="134" y="72" font-family="Montserrat,sans-serif" font-size="13" font-weight="700" fill="#8BA07A" letter-spacing="6">PRO HOME</text>
+      <text x="130" y="114" font-family="Montserrat,sans-serif" font-size="46" font-weight="900" fill="#1A1A1A" letter-spacing="2">MEDIA</text>
+      <line x1="130" y1="126" x2="370" y2="126" stroke="#4A5916" stroke-width="1.5"/>
+      <text x="130" y="146" font-family="Montserrat,sans-serif" font-size="10" font-weight="500" fill="#8BA07A" letter-spacing="5">PHOTOGRAPHY · VIDEO</text>
+    </svg>
+  </a>
+  <div class="nav-links">
+    <a href="index.html#services">Services</a>
+    <a href="index.html#packages">Packages</a>
+    <a href="portfolio.html" class="active-page">Portfolio</a>
+    <a href="index.html#process">How It Works</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="index.html#contact" class="nav-cta">Book Now</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="port-hero">
+  <p class="eyebrow">Our Work</p>
+  <h1>Every Frame<br><em>Tells a Story</em></h1>
+  <p>Browse our portfolio of real estate photography, drone aerials, and cinematic video across South Florida and beyond.</p>
+  <div class="port-stats">
+    <div>
+      <div class="port-stat-num">50+</div>
+      <div class="port-stat-label">Properties Shot</div>
+    </div>
+    <div>
+      <div class="port-stat-num">4</div>
+      <div class="port-stat-label">Markets</div>
+    </div>
+    <div>
+      <div class="port-stat-num">100%</div>
+      <div class="port-stat-label">Drone Included</div>
+    </div>
+  </div>
+</section>
+
+<!-- FILTERS -->
+<div class="filters-wrap" id="filtersWrap">
+  <div class="filter-tabs">
+    <button class="filter-btn active" data-service="all">All Work</button>
+    <button class="filter-btn" data-service="photos">Photography</button>
+    <button class="filter-btn" data-service="drone">Drone Aerial</button>
+    <button class="filter-btn" data-service="video">Video</button>
+  </div>
+  <div class="type-filters">
+    <span>Type:</span>
+    <button class="type-btn active" data-type="all">All</button>
+    <button class="type-btn" data-type="residential">Residential</button>
+    <button class="type-btn" data-type="luxury">Luxury</button>
+    <button class="type-btn" data-type="condo">Condo</button>
+  </div>
+</div>
+
+<!-- PORTFOLIO GRID -->
+<section class="portfolio-section">
+  <p class="portfolio-count reveal"><span id="visibleCount">4</span> projects</p>
+  <div class="portfolio-grid" id="portfolioGrid">
+    <div class="empty-state" id="emptyState">
+      <h3>No projects found</h3>
+      <p>Try a different filter combination.</p>
+    </div>
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+  <div class="lb-header">
+    <div class="lb-title">
+      <div class="lb-address" id="lbAddress"></div>
+      <div class="lb-counter" id="lbCounter"></div>
+    </div>
+    <button class="lb-close" id="lbClose" aria-label="Close">✕</button>
+  </div>
+  <div class="lb-main">
+    <div class="lb-img-wrap">
+      <img id="lbImg" src="" alt="Property photo">
+    </div>
+    <div class="lb-type-label" id="lbTypeLabel"></div>
+    <div class="lb-nav">
+      <button class="lb-btn" id="lbPrev" aria-label="Previous">←</button>
+      <button class="lb-btn" id="lbNext" aria-label="Next">→</button>
+    </div>
+  </div>
+  <div class="lb-thumbs" id="lbThumbs"></div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <svg width="180" height="80" viewBox="0 0 260 120" xmlns="http://www.w3.org/2000/svg" style="margin-bottom:16px; display:block;">
+        <g transform="translate(46, 60)">
+          <polygon points="0,-36 31,-18 31,18 0,36 -31,18 -31,-18" stroke="white" stroke-width="2" fill="none"/>
+          <circle cx="0" cy="0" r="14" stroke="white" stroke-width="1" fill="none" opacity="0.3"/>
+          <circle cx="0" cy="0" r="9" stroke="#8BA07A" stroke-width="1" fill="none"/>
+          <circle cx="0" cy="-36" r="3" fill="#8BA07A"/>
+          <circle cx="31" cy="-18" r="3" fill="#8BA07A"/>
+          <circle cx="31" cy="18" r="3" fill="#8BA07A"/>
+          <circle cx="0" cy="36" r="3" fill="#8BA07A"/>
+          <circle cx="-31" cy="18" r="3" fill="#8BA07A"/>
+          <circle cx="-31" cy="-18" r="3" fill="#8BA07A"/>
+        </g>
+        <text x="92" y="48" font-family="Montserrat,sans-serif" font-size="8" font-weight="700" fill="#8BA07A" letter-spacing="4">PRO HOME</text>
+        <text x="89" y="74" font-family="Montserrat,sans-serif" font-size="28" font-weight="900" fill="white" letter-spacing="1">MEDIA</text>
+        <text x="89" y="90" font-family="Montserrat,sans-serif" font-size="6.5" font-weight="500" fill="#666" letter-spacing="3">PHOTOGRAPHY · VIDEO</text>
+      </svg>
+      <p>Professional real estate media serving South Florida and beyond. Part of the Pro Home family of companies.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Services</h4>
+      <a href="index.html#services">HDR Photography</a>
+      <a href="index.html#services">Drone Aerials</a>
+      <a href="index.html#services">Cinematic Video</a>
+      <a href="index.html#services">3D Virtual Tours</a>
+      <a href="index.html#services">Virtual Staging</a>
+    </div>
+    <div class="footer-links">
+      <h4>Company</h4>
+      <a href="index.html#packages">Packages & Pricing</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="index.html#contact">Book a Shoot</a>
+      <a href="tel:17862085633">(786) 208-5633</a>
+    </div>
+    <div class="footer-links">
+      <h4>Pro Home Family</h4>
+      <a href="#">Pro Home Adviser</a>
+      <a href="#">Pro Home Inspection</a>
+      <a href="#">Pro Home Management</a>
+      <a href="#">Pro Home Media</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2025 Pro Home Media. All rights reserved.</div>
+    <div class="footer-umbrella">Part of the <span>Pro Home</span> family of companies</div>
+  </div>
+</footer>
+
+<script>
+// ─── DATA ───────────────────────────────────────────────────────────────────
+const GD = id => `https://lh3.googleusercontent.com/d/${id}`;
+
+const listings = [
+  {
+    id: 'cape-coral-sw14',
+    address: 'Cape Coral, FL',
+    neighborhood: '9 SW 14th Ave',
+    type: 'residential',
+    typeLabel: 'Single Family',
+    services: ['photos', 'drone'],
+    cover: GD('1mr2WyglRHkvHkQP4CD38jduW9vyJCAD6'),
+    photos: [
+      { id: '1mr2WyglRHkvHkQP4CD38jduW9vyJCAD6', kind: 'hdr' },
+      { id: '1Ui9wuZ90e9ujXGf5-qvDOzHotDBcoPso', kind: 'hdr' },
+      { id: '1QIl-FzMH-r0860Cd_EDzhBq7v9LTuTnV', kind: 'hdr' },
+      { id: '1jjgEREXG59khyolXyWsYgkmHry_OP6wa', kind: 'hdr' },
+      { id: '1QTtI6YUwklu-uE4-rUAg3UJAL_I-cZ90', kind: 'hdr' },
+      { id: '1zhILOHy_5rXPVl7WnFGifRHZZ24BA_Cn', kind: 'hdr' },
+      { id: '1oGq7O1ly2_M2cBsm0f8a9BlFsQrUn3IL', kind: 'hdr' },
+      { id: '1kWgtj5QuHde5R4FdoiPtnsumnxrPCVog', kind: 'hdr' },
+      { id: '11qyNLwm2058ri0EdpeTtO6lUIqKC7S4_', kind: 'drone' },
+      { id: '1xAoiRdFlpBaxYEncyplEyngjXpJSvq7p', kind: 'drone' },
+      { id: '1YCNema-tQFk_B5767hM4HIpQbYpBI_RP', kind: 'drone' },
+      { id: '1ua3eIN7IEQr6PbOeN-WhzVdiX9DORNHI', kind: 'drone' },
+      { id: '1CtIHuL_Gbd5kGLu07P5KPDhcUjHHM6C-', kind: 'drone' },
+      { id: '1JB9o5Z2bftgFprtqsj_FMtHjXPGS8X13', kind: 'drone' },
+      { id: '1EeWmkNRZ2VySHsOOv4vZu92FN8OhcFT9', kind: 'drone' },
+      { id: '1XbZAjNHAOTeso1aLBjb1GG15Z-nt5swc', kind: 'drone' },
+    ]
+  },
+  {
+    id: 'sw-ranches-botaniko',
+    address: 'Southwest Ranches, FL',
+    neighborhood: '16582 S Botaniko Dr',
+    type: 'luxury',
+    typeLabel: 'Luxury Estate',
+    services: ['photos'],
+    cover: GD('1seCEkaGIplR9nY02PFVdu3_VuG6i8bFn'),
+    photos: [
+      { id: '1seCEkaGIplR9nY02PFVdu3_VuG6i8bFn', kind: 'hdr' },
+      { id: '1V2r5iq3Imw-gf-8faV7K62t11gzVmTz9', kind: 'hdr' },
+      { id: '1rdSoVbdI37RtMjPasyIs1Agcuci4wmfw', kind: 'hdr' },
+      { id: '1gDwuajnbENaq0XnMLTnZQRMRT51vBcR2', kind: 'hdr' },
+      { id: '1MMQPICFRiIpFNDyj4lkQI1iiunQ7-axR', kind: 'hdr' },
+      { id: '1Uv4vD1VSdbq48scOFb1D7ftj9yrjh7VC', kind: 'hdr' },
+      { id: '1OTQU_Vx5eoW5d3WG0zIeu3e6hoyCt21Q', kind: 'hdr' },
+      { id: '1rdKSFNZm-ZudL0M9IWR95duXJw-r0Xcw', kind: 'hdr' },
+      { id: '1FhkSio-dk1XdhF4OOSFy_eLDpuszCumS', kind: 'hdr' },
+      { id: '1qaXMQL8KZ94dId9fAXS0MY26dgPrEa2_', kind: 'hdr' },
+      { id: '1-q8hGi6qwj0cuJJ6wF6sxiNX3OVpAOpC', kind: 'hdr' },
+      { id: '1bcUh4yAzv3tVp47zPMzjCnvMYQHOSSS4', kind: 'hdr' },
+      { id: '1uBa2dyu3TxEJ_-65a9T23iUrOlhao-Nw', kind: 'hdr' },
+      { id: '1oXFpqSDo7yQDCO49oNt120tAwr8e1UlI', kind: 'hdr' },
+    ]
+  },
+  {
+    id: 'landmark-304',
+    address: 'Miami, FL',
+    neighborhood: 'Landmark at Doral',
+    type: 'condo',
+    typeLabel: 'Condominium',
+    services: ['photos', 'drone'],
+    cover: GD('12fNPex0uaOgkzaOY234-uOT7COPkiMAe'),
+    photos: [
+      { id: '12fNPex0uaOgkzaOY234-uOT7COPkiMAe', kind: 'hdr' },
+      { id: '1NMDn6SKBafyizdcqJqjYWakbINF_t4yS', kind: 'hdr' },
+      { id: '1wR85Pf_VTdSXUqNk3YltBds7q2CyXstx', kind: 'hdr' },
+      { id: '1YsHVMVpO9LLXhNkPCJtKBdkevpHCx_jo', kind: 'hdr' },
+      { id: '1C_itRKFAKnF9OvJ5FFnoFWuzCNBf_EnJ', kind: 'hdr' },
+      { id: '10GLbpyKRlmg_JnElhVV2oi7S7RPD2bYh', kind: 'hdr' },
+      { id: '1iQXpRZlvBya_wyzQYVZv_fEMisccRePP', kind: 'hdr' },
+      { id: '1HOlpeUL-xaZ1QwsKwx_oPdUiJc5j_uMq', kind: 'hdr' },
+      { id: '1h3BVRaLtdLUrdQ_re2Qu8UBO7kBsRe6w', kind: 'hdr' },
+      { id: '1er7KkVduni20d_EJ_ObYICUCHrnh5E5Y', kind: 'hdr' },
+      { id: '1cZpoL148bjr2TI_yz4kmn-3TP54PQS4C', kind: 'drone' },
+      { id: '14CC_-y8ZtXM3t_46ldmD6ewTXfZDNL3l', kind: 'drone' },
+      { id: '1MUsxAIgFVwzlvNP1pC5L-mSyS6zZ8_ej', kind: 'drone' },
+    ]
+  },
+  {
+    id: 'miami-duplex',
+    address: 'Miami, FL',
+    neighborhood: 'Miami Duplex',
+    type: 'residential',
+    typeLabel: 'Duplex',
+    services: ['photos'],
+    cover: GD('1iBZ_mW-kYuz1SDjZJnta5HnUyhP82yuR'),
+    photos: [
+      { id: '1iBZ_mW-kYuz1SDjZJnta5HnUyhP82yuR', kind: 'hdr' },
+      { id: '1ulfN0_spdjxiKHI21hEe65_qIuKaLQfA', kind: 'hdr' },
+      { id: '19lm-IDf_6spW2MGO6-ilOnj3FC3leEQb', kind: 'hdr' },
+      { id: '1hIsDQp5dnWcohFJ4fiwAqlOSpaKXVGMy', kind: 'hdr' },
+      { id: '1GbEl8JZ3E3rlwrraNN1BmxdKWMmpuYWF', kind: 'hdr' },
+      { id: '15G-gT0nKqM9TNVjv7mmrSXISwO_awTOi', kind: 'hdr' },
+      { id: '1jHyFuRy6YzP_1naa9PRDhu-h7ZvPJLpG', kind: 'hdr' },
+      { id: '1lGCNOyvS3-yCG2xEDVNsMfReF3okztab', kind: 'hdr' },
+      { id: '1HqVopBWkJYBc3oe_7YrXml-EYsrHCmLL', kind: 'hdr' },
+      { id: '1VpVlCpPyrE-62V-Zix1mIF4XYKV7r6qW', kind: 'hdr' },
+      { id: '1hrek08zc93chuxPpOv8iH0GlJYjG9dnF', kind: 'hdr' },
+      { id: '1Hz8OSIfsZqqERBPg6FRkGKtcMlK6htv9', kind: 'hdr' },
+      { id: '1eBpDPZJTwRLtnZSgVgOoY5opoEdGWZ9B', kind: 'hdr' },
+      { id: '1vPnS0IkSattJMMlhV8AXxnUvFUN8KNwO', kind: 'hdr' },
+      { id: '1VV9Wo5mmvr52slv7583uTXqE2U41v-O4', kind: 'hdr' },
+      { id: '1kB37aKvQ6J99idSferUVn4k463C_ooqJ', kind: 'hdr' },
+    ]
+  }
+];
+
+const serviceLabels = { photos: 'HDR', drone: 'Drone', video: 'Video', staging: 'Staging', tour: '3D Tour' };
+const serviceTagClass = { photos: 'tag-hdr', drone: 'tag-drone', video: 'tag-video', staging: 'tag-staging', tour: 'tag-tour' };
+const kindLabel = { hdr: 'HDR Photography', drone: 'Drone Aerial', video: 'Cinematic Video' };
+
+// ─── RENDER GRID ────────────────────────────────────────────────────────────
+const grid = document.getElementById('portfolioGrid');
+const emptyState = document.getElementById('emptyState');
+const visibleCount = document.getElementById('visibleCount');
+
+function buildCards() {
+  listings.forEach(l => {
+    const card = document.createElement('div');
+    card.className = 'listing-card reveal';
+    card.dataset.id = l.id;
+    card.dataset.type = l.type;
+    card.dataset.services = l.services.join(',');
+
+    const serviceTags = l.services.map(s =>
+      `<span class="service-tag ${serviceTagClass[s]}">${serviceLabels[s]}</span>`
+    ).join('');
+
+    card.innerHTML = `
+      <div class="card-img">
+        <img src="${l.cover}" alt="${l.address}" loading="lazy">
+        <div class="card-type-badge">${l.typeLabel}</div>
+        <div class="card-photo-count">📷 ${l.photos.length} photos</div>
+        <div class="card-overlay">
+          <div class="overlay-cta">View Gallery</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-address">${l.address}</div>
+        <div class="card-type-label">${l.neighborhood}</div>
+        <div class="card-services">${serviceTags}</div>
+      </div>
+    `;
+
+    card.addEventListener('click', () => openLightbox(l.id));
+    grid.appendChild(card);
+  });
+
+  grid.appendChild(emptyState);
+  observeReveal();
+}
+
+// ─── FILTER ─────────────────────────────────────────────────────────────────
+let activeService = 'all';
+let activeType = 'all';
+
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    activeService = btn.dataset.service;
+    applyFilters();
+  });
+});
+
+document.querySelectorAll('.type-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.type-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    activeType = btn.dataset.type;
+    applyFilters();
+  });
+});
+
+function applyFilters() {
+  let count = 0;
+  document.querySelectorAll('.listing-card').forEach(card => {
+    const services = card.dataset.services.split(',');
+    const type = card.dataset.type;
+    const matchService = activeService === 'all' || services.includes(activeService);
+    const matchType = activeType === 'all' || type === activeType;
+    if (matchService && matchType) {
+      card.classList.remove('hidden');
+      count++;
+    } else {
+      card.classList.add('hidden');
+    }
+  });
+  visibleCount.textContent = count;
+  emptyState.classList.toggle('show', count === 0);
+}
+
+// ─── LIGHTBOX ────────────────────────────────────────────────────────────────
+let currentListing = null;
+let currentIndex = 0;
+
+const lightbox = document.getElementById('lightbox');
+const lbImg = document.getElementById('lbImg');
+const lbAddress = document.getElementById('lbAddress');
+const lbCounter = document.getElementById('lbCounter');
+const lbTypeLabel = document.getElementById('lbTypeLabel');
+const lbThumbs = document.getElementById('lbThumbs');
+const lbClose = document.getElementById('lbClose');
+const lbPrev = document.getElementById('lbPrev');
+const lbNext = document.getElementById('lbNext');
+
+function openLightbox(id) {
+  currentListing = listings.find(l => l.id === id);
+  currentIndex = 0;
+  buildThumbs();
+  showPhoto(0);
+  lightbox.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+  lightbox.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function buildThumbs() {
+  lbThumbs.innerHTML = '';
+  currentListing.photos.forEach((p, i) => {
+    const t = document.createElement('div');
+    t.className = 'lb-thumb' + (i === 0 ? ' active' : '');
+    t.innerHTML = `<img src="${GD(p.id)}" alt="" loading="lazy">`;
+    t.addEventListener('click', () => showPhoto(i));
+    lbThumbs.appendChild(t);
+  });
+}
+
+function showPhoto(index) {
+  const photo = currentListing.photos[index];
+  currentIndex = index;
+
+  lbImg.classList.add('loading');
+  lbImg.onload = () => lbImg.classList.remove('loading');
+  lbImg.src = GD(photo.id);
+
+  lbAddress.textContent = `${currentListing.address} — ${currentListing.neighborhood}`;
+  lbCounter.textContent = `${index + 1} / ${currentListing.photos.length}`;
+  lbTypeLabel.textContent = kindLabel[photo.kind] || photo.kind.toUpperCase();
+
+  document.querySelectorAll('.lb-thumb').forEach((t, i) => {
+    t.classList.toggle('active', i === index);
+  });
+
+  // scroll thumb into view
+  const thumbs = document.querySelectorAll('.lb-thumb');
+  if (thumbs[index]) thumbs[index].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+}
+
+function prev() { showPhoto((currentIndex - 1 + currentListing.photos.length) % currentListing.photos.length); }
+function next() { showPhoto((currentIndex + 1) % currentListing.photos.length); }
+
+lbClose.addEventListener('click', closeLightbox);
+lbPrev.addEventListener('click', prev);
+lbNext.addEventListener('click', next);
+
+lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+
+document.addEventListener('keydown', e => {
+  if (!lightbox.classList.contains('open')) return;
+  if (e.key === 'Escape') closeLightbox();
+  if (e.key === 'ArrowLeft') prev();
+  if (e.key === 'ArrowRight') next();
+});
+
+// ─── CURSOR ──────────────────────────────────────────────────────────────────
+const cursor = document.getElementById('cursor');
+const ring = document.getElementById('cursorRing');
+let mx = 0, my = 0, rx = 0, ry = 0;
+document.addEventListener('mousemove', e => {
+  mx = e.clientX; my = e.clientY;
+  cursor.style.left = mx + 'px'; cursor.style.top = my + 'px';
+});
+(function animRing() {
+  rx += (mx - rx) * .12; ry += (my - ry) * .12;
+  ring.style.left = rx + 'px'; ring.style.top = ry + 'px';
+  requestAnimationFrame(animRing);
+})();
+document.querySelectorAll('a, button, .listing-card, .lb-btn, .lb-thumb').forEach(el => {
+  el.addEventListener('mouseenter', () => ring.classList.add('hover'));
+  el.addEventListener('mouseleave', () => ring.classList.remove('hover'));
+});
+
+// ─── NAV SCROLL ──────────────────────────────────────────────────────────────
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 40);
+});
+
+// ─── SCROLL REVEAL ───────────────────────────────────────────────────────────
+function observeReveal() {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: .1 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+}
+
+// ─── INIT ────────────────────────────────────────────────────────────────────
+buildCards();
+</script>
+
+<!-- WhatsApp floating button -->
+<a href="https://wa.me/17862085633?text=Hi%2C%20I%27m%20interested%20in%20booking%20a%20real%20estate%20shoot%20with%20Pro%20Home%20Media."
+   class="whatsapp-fab" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 32 32" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <path d="M16 2C8.268 2 2 8.268 2 16c0 2.432.638 4.715 1.756 6.693L2 30l7.535-1.724A13.924 13.924 0 0016 30c7.732 0 14-6.268 14-14S23.732 2 16 2zm0 25.5a11.45 11.45 0 01-5.84-1.598l-.418-.249-4.473 1.022 1.054-4.355-.273-.447A11.43 11.43 0 014.5 16C4.5 9.596 9.596 4.5 16 4.5S27.5 9.596 27.5 16 22.404 27.5 16 27.5zM22.71 19.15c-.34-.17-2.006-.99-2.317-1.103-.311-.113-.537-.17-.763.17-.226.34-.875 1.103-1.072 1.33-.198.226-.396.255-.736.085-.34-.17-1.435-.53-2.733-1.686-1.01-.9-1.69-2.013-1.888-2.353-.198-.34-.021-.523.149-.693.153-.152.34-.397.51-.595.17-.198.226-.34.34-.566.113-.226.056-.425-.028-.595-.085-.17-.763-1.84-1.044-2.52-.275-.66-.554-.57-.763-.58l-.65-.011c-.226 0-.594.085-.905.425-.311.34-1.187 1.16-1.187 2.829s1.215 3.28 1.384 3.507c.17.226 2.39 3.648 5.79 5.118.81.35 1.441.558 1.933.714.812.258 1.55.221 2.134.134.651-.097 2.006-.82 2.288-1.611.283-.791.283-1.468.198-1.61-.085-.141-.311-.226-.651-.397z"/>
+  </svg>
+</a>
+</body>
+</html>
