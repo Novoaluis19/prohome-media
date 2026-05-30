@@ -567,6 +567,39 @@ nav.scrolled .nav-cta:hover { background: var(--green-dark) !important; }
   color: var(--green); white-space: nowrap;
 }
 
+/* TESTIMONIALS */
+.testimonials { padding: 120px 80px; background: var(--white); }
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 64px;
+}
+.testimonial-card {
+  background: var(--cream);
+  border-radius: 16px;
+  padding: 36px;
+  border: 1px solid var(--gray-light);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: box-shadow .3s, transform .3s;
+}
+.testimonial-card:hover { box-shadow: 0 12px 40px rgba(74,89,22,.1); transform: translateY(-3px); }
+.testimonial-stars { display: flex; gap: 4px; }
+.testimonial-stars svg { width: 16px; height: 16px; fill: #c8a84b; }
+.testimonial-text {
+  font-size: 14px; line-height: 1.85;
+  color: var(--gray); font-style: italic; flex: 1;
+}
+.testimonial-author { border-top: 1px solid var(--gray-light); padding-top: 18px; }
+.testimonial-name { font-size: 14px; font-weight: 600; color: var(--black); }
+.testimonial-brokerage {
+  font-size: 10px; font-weight: 600;
+  letter-spacing: .12em; text-transform: uppercase;
+  color: var(--green); margin-top: 4px;
+}
+
 /* PROCESS */
 .process {
   padding: 120px 80px;
@@ -933,6 +966,8 @@ footer {
   .addons-grid { grid-template-columns: 1fr 1fr; }
   .process { padding: 80px 32px; }
   .process-steps { grid-template-columns: 1fr 1fr; }
+  .testimonials { padding: 80px 24px; }
+  .testimonials-grid { grid-template-columns: 1fr; }
   .process-steps::before { display: none; }
   .coverage { padding: 60px 32px; flex-direction: column; }
   .contact { padding: 80px 32px; grid-template-columns: 1fr; }
@@ -1405,6 +1440,65 @@ footer {
     <a href="portfolio.html" class="btn-portfolio">
       View Full Portfolio <span class="arrow">→</span>
     </a>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <div class="section-header reveal">
+    <div>
+      <p class="section-eyebrow">What Agents Say</p>
+      <h2 class="section-title">Trusted by<br><strong>Top Realtors</strong></h2>
+    </div>
+    <p style="max-width:300px; font-size:14px; line-height:1.75; color:var(--gray);">Real estate professionals across South Florida rely on Pro Home Media to make their listings stand out.</p>
+  </div>
+  <div class="testimonials-grid">
+
+    <div class="testimonial-card reveal reveal-delay-1">
+      <div class="testimonial-stars">
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      </div>
+      <p class="testimonial-text">"I've had the opportunity to work with Pro Home Media on several listings, and the quality of their photography has been outstanding every time. The attention to detail, lighting, and composition truly helps showcase each property in the best possible way. Their turnaround time is fast, communication is excellent, and the final product always exceeds expectations."</p>
+      <div class="testimonial-author">
+        <div class="testimonial-name">Lenis Pernia</div>
+        <div class="testimonial-brokerage">Xcellence Realty</div>
+      </div>
+    </div>
+
+    <div class="testimonial-card reveal reveal-delay-2">
+      <div class="testimonial-stars">
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      </div>
+      <p class="testimonial-text">"Pro Home Media has become an important part of our marketing strategy. Their real estate photography consistently delivers high-quality images that help our listings stand out online and generate more interest from buyers. They are professional, reliable, and understand exactly how to capture the features that matter most in a property."</p>
+      <div class="testimonial-author">
+        <div class="testimonial-name">Asdrubal Faneite</div>
+        <div class="testimonial-brokerage">Xcellence Realty</div>
+      </div>
+    </div>
+
+    <div class="testimonial-card reveal reveal-delay-3">
+      <div class="testimonial-stars">
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      </div>
+      <p class="testimonial-text">"Working with Pro Home Media has been a great experience. Their photography is clean, professional, and highlights every property's best features. The quality of the images has made a noticeable difference in how our listings are presented to potential buyers. They are responsive, easy to work with, and consistently deliver exceptional results."</p>
+      <div class="testimonial-author">
+        <div class="testimonial-name">Oscar Paraguacuto</div>
+        <div class="testimonial-brokerage">LUXE Properties</div>
+      </div>
+    </div>
+
   </div>
 </section>
 
