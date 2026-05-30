@@ -435,15 +435,13 @@ nav.scrolled .nav-cta:hover { background: var(--green-dark) !important; }
   transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 .pkg-card:hover {
+  background: var(--green-light);
   border-color: var(--green-light);
-  transform: translateY(-6px);
-  box-shadow: 0 24px 60px rgba(74,89,22,0.12);
+  transform: translateY(-10px);
+  box-shadow: 0 24px 60px rgba(74,89,22,0.22);
 }
 .pkg-card.featured {
-  background: var(--green);
-  border-color: var(--green);
   transform: translateY(-8px);
-  box-shadow: 0 24px 60px rgba(74,89,22,0.25);
 }
 .pkg-card.featured:hover { transform: translateY(-14px); }
 
@@ -455,14 +453,14 @@ nav.scrolled .nav-cta:hover { background: var(--green-dark) !important; }
   letter-spacing: 0.12em; text-transform: uppercase;
   padding: 4px 10px; border-radius: 20px;
 }
-.pkg-card.featured .pkg-badge { background: var(--cream); color: var(--green); }
+.pkg-card:hover .pkg-badge { background: var(--cream); color: var(--green); }
 
 .pkg-name {
   font-size: 11px; font-weight: 600;
   letter-spacing: 0.18em; text-transform: uppercase;
   color: var(--green); margin-bottom: 8px;
 }
-.pkg-card.featured .pkg-name { color: var(--green-light); }
+.pkg-card:hover .pkg-name { color: var(--cream); }
 
 .pkg-price {
   font-family: 'Cormorant Garamond', serif;
@@ -470,7 +468,7 @@ nav.scrolled .nav-cta:hover { background: var(--green-dark) !important; }
   color: var(--black); line-height: 1;
   margin-bottom: 4px;
 }
-.pkg-card.featured .pkg-price { color: var(--white); }
+.pkg-card:hover .pkg-price { color: var(--white); }
 
 .pkg-price span { font-size: 24px; font-weight: 300; vertical-align: super; }
 
@@ -478,14 +476,14 @@ nav.scrolled .nav-cta:hover { background: var(--green-dark) !important; }
   font-size: 11px; color: var(--gray);
   margin-bottom: 32px;
 }
-.pkg-card.featured .pkg-sub { color: rgba(255,255,255,0.6); }
+.pkg-card:hover .pkg-sub { color: rgba(255,255,255,0.75); }
 
 .pkg-divider {
   height: 1px;
   background: var(--cream-dark);
   margin-bottom: 28px;
 }
-.pkg-card.featured .pkg-divider { background: rgba(255,255,255,0.15); }
+.pkg-card:hover .pkg-divider { background: rgba(255,255,255,0.25); }
 
 .pkg-features { list-style: none; margin-bottom: 36px; }
 .pkg-features li {
@@ -494,14 +492,14 @@ nav.scrolled .nav-cta:hover { background: var(--green-dark) !important; }
   display: flex; align-items: flex-start; gap: 10px;
   line-height: 1.4;
 }
-.pkg-card.featured .pkg-features li { color: rgba(255,255,255,0.85); }
+.pkg-card:hover .pkg-features li { color: rgba(255,255,255,0.9); }
 .pkg-features li::before {
   content: '✓';
   color: var(--green);
   font-weight: 700; font-size: 12px;
   flex-shrink: 0; margin-top: 1px;
 }
-.pkg-card.featured .pkg-features li::before { color: var(--green-light); }
+.pkg-card:hover .pkg-features li::before { color: var(--cream); }
 
 .pkg-btn {
   display: block; width: 100%;
@@ -517,11 +515,11 @@ nav.scrolled .nav-cta:hover { background: var(--green-dark) !important; }
   cursor: pointer;
 }
 .pkg-btn:hover { background: var(--green); color: var(--white); border-color: var(--green); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(74,89,22,.25); }
-.pkg-card.featured .pkg-btn {
+.pkg-card:hover .pkg-btn {
   background: var(--white); color: var(--green);
   border-color: var(--white);
 }
-.pkg-card.featured .pkg-btn:hover { background: var(--green-dark); color: var(--white); border-color: var(--green-dark); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,.25); }
+.pkg-card:hover .pkg-btn:hover { background: var(--green-dark); color: var(--white); border-color: var(--green-dark); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,.25); }
 
 /* ADD ONS */
 .addons {
