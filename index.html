@@ -1399,51 +1399,7 @@ footer {
     </p>
   </div>
 
-  <div class="featured-grid reveal">
-    <!-- Large left card -->
-    <a href="portfolio.html" class="featured-card tall">
-      <img src="https://lh3.googleusercontent.com/d/1mr2WyglRHkvHkQP4CD38jduW9vyJCAD6" alt="Cape Coral aerial">
-      <div class="featured-card-overlay"></div>
-      <div class="featured-card-body">
-        <span class="featured-card-type">Single Family</span>
-        <div class="featured-card-addr">Cape Coral, FL</div>
-        <div class="featured-card-sub">9 SW 14th Ave · 16 photos</div>
-        <div class="featured-services">
-          <span class="fs-tag fs-hdr">HDR</span>
-          <span class="fs-tag fs-drone">Drone</span>
-        </div>
-      </div>
-    </a>
-
-    <!-- Top right -->
-    <a href="portfolio.html" class="featured-card">
-      <img src="https://lh3.googleusercontent.com/d/1seCEkaGIplR9nY02PFVdu3_VuG6i8bFn" alt="Southwest Ranches luxury estate">
-      <div class="featured-card-overlay"></div>
-      <div class="featured-card-body">
-        <span class="featured-card-type">Luxury Estate</span>
-        <div class="featured-card-addr">Southwest Ranches, FL</div>
-        <div class="featured-card-sub">Botaniko · 14 photos</div>
-        <div class="featured-services">
-          <span class="fs-tag fs-hdr">HDR</span>
-        </div>
-      </div>
-    </a>
-
-    <!-- Bottom right -->
-    <a href="portfolio.html" class="featured-card">
-      <img src="https://lh3.googleusercontent.com/d/12fNPex0uaOgkzaOY234-uOT7COPkiMAe" alt="Miami condominium">
-      <div class="featured-card-overlay"></div>
-      <div class="featured-card-body">
-        <span class="featured-card-type">Condominium</span>
-        <div class="featured-card-addr">Miami, FL</div>
-        <div class="featured-card-sub">Landmark at Doral · 13 photos</div>
-        <div class="featured-services">
-          <span class="fs-tag fs-hdr">HDR</span>
-          <span class="fs-tag fs-drone">Drone</span>
-        </div>
-      </div>
-    </a>
-  </div>
+  <div class="featured-grid reveal" id="featuredGrid"></div>
 
   <div class="featured-cta reveal">
     <a href="portfolio.html" class="btn-portfolio">
@@ -1634,10 +1590,10 @@ footer {
     </div>
     <div class="footer-links">
       <h4>Pro Home Family</h4>
-      <a href="#">Pro Home Adviser</a>
-      <a href="#">Pro Home Inspection</a>
-      <a href="#">Pro Home Management</a>
-      <a href="#">Pro Home Media</a>
+      <a href="https://prohomeadviser.com" target="_blank" rel="noopener">Pro Home Adviser</a>
+      <span style="color:rgba(255,255,255,0.25); font-size:13px;">Pro Home Inspection</span>
+      <a href="https://prohomeadviser.com" target="_blank" rel="noopener">Pro Home Management</a>
+      <a href="https://prohomemedia.com">Pro Home Media</a>
     </div>
   </div>
   <div class="footer-bottom">
@@ -1670,6 +1626,59 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.12 });
 reveals.forEach(el => observer.observe(el));
+
+// Featured Work — random 3 projects per page load
+(function () {
+  const GD = id => `https://lh3.googleusercontent.com/d/${id}`;
+  const projects = [
+    { cover: '1mr2WyglRHkvHkQP4CD38jduW9vyJCAD6', type: 'Single Family',   addr: 'Cape Coral, FL',       sub: '9 SW 14th Ave',         photos: 30, services: ['HDR','Drone'] },
+    { cover: '15SoJ2gi4McQAFCw7Nt84OnZb-UyjVxVf', type: 'Single Family',   addr: 'Cape Coral, FL',       sub: '2206 NE 35th Ln',       photos: 24, services: ['HDR'] },
+    { cover: '1FeEIL0hARDkBh9xJ38mzaU1DHWiMxkVR', type: 'Single Family',   addr: 'Cape Coral, FL',       sub: '2729 SE 5th Ter',       photos: 30, services: ['HDR'] },
+    { cover: '1fuNWBT3_-TMlypLlBFNwBanlCNcVCkZc', type: 'Single Family',   addr: 'Cape Coral, FL',       sub: '2931 SW 30th St',       photos: 36, services: ['HDR','Drone'] },
+    { cover: '1TErBrv9-4QObcq0Tpj6TLIW25xOSEdYh', type: 'Single Family',  addr: 'Cape Coral, FL',       sub: '5405 SW 25th Ct',       photos: 24, services: ['HDR'] },
+    { cover: '1NMDn6SKBafyizdcqJqjYWakbINF_t4yS', type: 'Condominium',     addr: 'Doral, FL',            sub: 'Landmark at Doral',     photos: 9,  services: ['HDR','Drone'] },
+    { cover: '1kWpinoS6TLy1RVKHA3Oc8oMDY_ioaM9S', type: 'Condominium',    addr: 'Doral, FL',            sub: 'Landmark at Doral',     photos: 30, services: ['HDR','Drone'] },
+    { cover: '1ZdTpjw-eYbPCeI0m0dxcbC5FtPwJSuUd', type: 'Commercial',     addr: 'Doral, FL',            sub: 'Doral Commerce',        photos: 10, services: ['HDR'] },
+    { cover: '1ulfN0_spdjxiKHI21hEe65_qIuKaLQfA', type: 'Duplex',          addr: 'Miami, FL',            sub: 'Miami Duplex',          photos: 4,  services: ['HDR'] },
+    { cover: '1tlyjE3b1op9YXX1u_xLCf-r4-qirRfU_', type: 'Condominium',    addr: 'Miami, FL',            sub: '10411 SW 108th Ave',    photos: 12, services: ['HDR'] },
+    { cover: '1bLsXA1geKTdGSy6My60ZqCIr8pNgHyW-', type: 'Single Family',  addr: 'Poinciana, FL',        sub: '3554 Mayfair St',       photos: 13, services: ['HDR'] },
+    { cover: '1GyM6h6nBihqaT9_Oj9ZVHbfL5xV4lJkm', type: 'Commercial',     addr: 'Weston, FL',           sub: 'Weston Commerce',       photos: 12, services: ['HDR','Drone'] },
+    { cover: '1I9-EZRNowavyxLY6qEjJnyf0ovFO31Ju', type: 'Luxury Home',    addr: 'South Florida',        sub: 'Sienna Community',      photos: 25, services: ['HDR'] },
+    { cover: '19qW7VEVVWSTY2fUwo2UK2UGIc5UJ_B_P', type: 'Single Family',  addr: 'Homestead, FL',        sub: 'Homestead',             photos: 19, services: ['HDR','Drone'] },
+    { cover: '1bkbFTnCYHW_RI5KNG4jztSW2eiWhonRX', type: 'Apartment',       addr: 'North Miami, FL',      sub: 'North Miami',           photos: 11, services: ['HDR'] },
+  ];
+
+  function shuffle(arr) {
+    const a = [...arr];
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  }
+
+  function tagHtml(s) {
+    const cls = s === 'Drone' ? 'fs-drone' : s === 'HDR' ? 'fs-hdr' : 'fs-video';
+    return `<span class="fs-tag ${cls}">${s}</span>`;
+  }
+
+  function cardHtml(p, tall) {
+    return `<a href="portfolio.html" class="featured-card${tall ? ' tall' : ''}">
+      <img src="${GD(p.cover)}" alt="${p.type} – ${p.addr}" loading="lazy">
+      <div class="featured-card-overlay"></div>
+      <div class="featured-card-body">
+        <span class="featured-card-type">${p.type}</span>
+        <div class="featured-card-addr">${p.addr}</div>
+        <div class="featured-card-sub">${p.sub} · ${p.photos} photos</div>
+        <div class="featured-services">${p.services.map(tagHtml).join('')}</div>
+      </div>
+    </a>`;
+  }
+
+  const picks = shuffle(projects).slice(0, 3);
+  const grid = document.getElementById('featuredGrid');
+  if (grid) grid.innerHTML = cardHtml(picks[0], true) + cardHtml(picks[1], false) + cardHtml(picks[2], false);
+})();
 
 // Hero photo rotator
 (function () {
