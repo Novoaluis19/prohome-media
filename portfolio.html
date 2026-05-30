@@ -42,13 +42,7 @@ body {
   background: var(--cream);
   color: var(--black);
   overflow-x: hidden;
-  cursor: none;
 }
-
-/* Cursor */
-.cursor { width: 12px; height: 12px; background: var(--green); border-radius: 50%; position: fixed; pointer-events: none; z-index: 9999; transform: translate(-50%,-50%); transition: transform .15s ease; }
-.cursor-ring { width: 36px; height: 36px; border: 1.5px solid var(--green); border-radius: 50%; position: fixed; pointer-events: none; z-index: 9998; transform: translate(-50%,-50%); transition: width .3s, height .3s, opacity .3s; }
-.cursor-ring.hover { width: 56px; height: 56px; opacity: .5; }
 
 /* NAV */
 nav {
@@ -297,6 +291,7 @@ nav.scrolled .nav-cta:hover { background: var(--green-dark) !important; }
 
 .lb-header {
   position: absolute; top: 0; left: 0; right: 0;
+  z-index: 10;
   padding: 20px 32px;
   display: flex; align-items: center; justify-content: space-between;
   background: linear-gradient(to bottom, rgba(0,0,0,.6) 0%, transparent 100%);
@@ -463,8 +458,6 @@ footer { background: var(--black); padding: 60px 80px 40px; }
 </head>
 <body>
 
-<div class="cursor" id="cursor"></div>
-<div class="cursor-ring" id="cursorRing"></div>
 
 <!-- NAV -->
 <nav id="navbar">
@@ -1245,23 +1238,6 @@ document.addEventListener('keydown', e => {
   if (e.key === 'ArrowRight') next();
 });
 
-// ─── CURSOR ──────────────────────────────────────────────────────────────────
-const cursor = document.getElementById('cursor');
-const ring = document.getElementById('cursorRing');
-let mx = 0, my = 0, rx = 0, ry = 0;
-document.addEventListener('mousemove', e => {
-  mx = e.clientX; my = e.clientY;
-  cursor.style.left = mx + 'px'; cursor.style.top = my + 'px';
-});
-(function animRing() {
-  rx += (mx - rx) * .12; ry += (my - ry) * .12;
-  ring.style.left = rx + 'px'; ring.style.top = ry + 'px';
-  requestAnimationFrame(animRing);
-})();
-document.querySelectorAll('a, button, .listing-card, .lb-btn, .lb-thumb').forEach(el => {
-  el.addEventListener('mouseenter', () => ring.classList.add('hover'));
-  el.addEventListener('mouseleave', () => ring.classList.remove('hover'));
-});
 
 // ─── NAV SCROLL ──────────────────────────────────────────────────────────────
 const navbar = document.getElementById('navbar');
