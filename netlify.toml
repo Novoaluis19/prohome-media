@@ -1,0 +1,51 @@
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Prevent clickjacking — no one can embed the site in an iframe
+    X-Frame-Options = "DENY"
+
+    # Prevent browsers from guessing content types (MIME sniffing)
+    X-Content-Type-Options = "nosniff"
+
+    # Only send referrer on same-origin requests
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+    # Force HTTPS for 1 year
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+
+    # Disable unnecessary browser features
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=()"
+
+    # Content Security Policy — only allow trusted sources
+    Content-Security-Policy = """
+      default-src 'self';
+      script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://unpkg.com https://formspree.io;
+      style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+      font-src 'self' https://fonts.gstatic.com;
+      img-src 'self' data: https://lh3.googleusercontent.com https://prohomemedia.com;
+      connect-src 'self' https://formspree.io https://www.google-analytics.com;
+      frame-ancestors 'none';
+      base-uri 'self';
+      form-action 'self' https://formspree.io
+    """
+
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, must-revalidate"
+
+[[headers]]
+  for = "/sitemap.xml"
+  [headers.values]
+    Content-Type = "application/xml; charset=utf-8"
+    Cache-Control = "public, max-age=86400"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000, immutable"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000, immutable"
