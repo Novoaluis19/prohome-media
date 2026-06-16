@@ -5,7 +5,7 @@
 Pro Home Media provides professional real estate media services for real estate agents and brokers across South Florida.
 
 Coverage hierarchy:
-1. PRIMARY: Miami (Miami-Dade County) + Broward County (Fort Lauderdale, Hollywood, Pembroke Pines, Coral Springs, Weston, Miramar)
+1. PRIMARY: Miami, Doral, Kendall, Homestead (Miami-Dade County) + Broward County (Fort Lauderdale, Hollywood, Pembroke Pines, Coral Springs, Weston, Miramar)
 2. SECONDARY: Cape Coral, Fort Myers, Naples (SW Florida / Lee & Collier County)
 3. EXTENDED: Orlando and surrounding areas (Kissimmee, Lake Nona, Winter Park) — with advance notice
 
