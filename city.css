@@ -243,3 +243,29 @@ footer {
   footer { flex-direction: column; gap: 24px; text-align: center; padding: 40px 24px; }
   .footer-links { flex-wrap: wrap; justify-content: center; }
 }
+
+/* Cross-links band */
+.also-covers {
+  background: var(--cream-dark);
+  padding: 40px 80px;
+  text-align: center;
+}
+.also-covers p {
+  font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--green); font-weight: 600; margin-bottom: 18px;
+}
+.also-links {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;
+}
+.also-links a {
+  display: inline-block; padding: 8px 18px;
+  border: 1px solid var(--green-light); border-radius: 100px;
+  font-size: 13px; color: var(--green-dark); text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+.also-links a:hover {
+  background: var(--green); color: white;
+}
+@media (max-width: 768px) {
+  .also-covers { padding: 32px 24px; }
+}
