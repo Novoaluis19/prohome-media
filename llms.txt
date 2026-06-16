@@ -2,7 +2,12 @@
 
 > South Florida's premier real estate photography and video production company. Based in Cape Coral, FL. Founded by Luis Novoa.
 
-Pro Home Media provides professional real estate media services for real estate agents and brokers across South Florida. Primary market: Miami and Miami-Dade County. Also serves Cape Coral, Fort Myers, Naples, and the Orlando area with advance notice.
+Pro Home Media provides professional real estate media services for real estate agents and brokers across South Florida.
+
+Coverage hierarchy:
+1. PRIMARY: Miami (Miami-Dade County) + Broward County (Fort Lauderdale, Hollywood, Pembroke Pines, Coral Springs, Weston, Miramar)
+2. SECONDARY: Cape Coral, Fort Myers, Naples (SW Florida / Lee & Collier County)
+3. EXTENDED: Orlando and surrounding areas (Kissimmee, Lake Nona, Winter Park) — with advance notice
 
 ## Services
 
