@@ -11,8 +11,10 @@
     Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
     # Disable unnecessary browser features
     Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=()"
-    # CSP — no unsafe-inline for scripts; GA init allowed via hash
-    Content-Security-Policy = "default-src 'self'; script-src 'self' 'sha256-JhzQbGEOghNvdKgKUwlE30lSGcf6FOVZ/EqlfoAVLG8=' https://www.googletagmanager.com https://unpkg.com https://formspree.io; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://lh3.googleusercontent.com; connect-src 'self' https://formspree.io https://www.google-analytics.com https://region1.google-analytics.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://formspree.io"
+    # CSP — no unsafe-inline and no hashes: todo el JS vive en archivos externos
+    # (main.js, portfolio.js, analytics.js), que 'self' ya permite. Un hash se
+    # desincroniza en silencio en cuanto alguien toca un espacio del script.
+    Content-Security-Policy = "default-src 'self'; script-src 'self' https://www.googletagmanager.com https://unpkg.com https://formspree.io; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://lh3.googleusercontent.com; connect-src 'self' https://formspree.io https://www.google-analytics.com https://region1.google-analytics.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://formspree.io"
 
 [[headers]]
   for = "/*.html"
